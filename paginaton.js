@@ -1,47 +1,7 @@
-function pagination(a) {
-    var e = "";
-    leftnum = parseInt(numshowpage / 2), leftnum == numshowpage - leftnum && (numshowpage = 2 * leftnum + 1), start = postnumber - leftnum, start < 1 && (start = 1), maximum = parseInt(a / postperpage) + 1, maximum - 1 == a / postperpage && (maximum -= 1), end = start + numshowpage - 1, end > maximum && (end = maximum), e += "<span class='totalpages'>Page " + postnumber + " of " + maximum + "</span>";
-    var s = parseInt(postnumber) - 1;
-    postnumber > 1 && (e += 2 == postnumber ? "page" == type ? '<span class="showpage"><a href="' + home_page + '">' + prevpage + "</a></span>" : '<span class="pagenumber"><a href="/search/label/' + lblname1 + "?&max-results=" + postperpage + '">' + prevpage + "</a></span>" : "page" == type ? '<span class="pagenumber"><a href="#" onclick="redirectpage(' + s + ');return false">' + prevpage + "</a></span>" : '<span class="pagenumber"><a href="#" onclick="redirectlabel(' + s + ');return false">' + prevpage + "</a></span>"), start > 1 && (e += "page" == type ? '<span class="pagenumber"><a href="' + home_page + '">1</a></span>' : '<span class="pagenumber"><a href="/search/label/' + lblname1 + "?&max-results=" + postperpage + '">1</a></span>'), start > 2 && (e += "");
-    for (var r = start; r <= end; r++) e += postnumber == r ? '<span class="current">' + r + "</span>" : 1 == r ? "page" == type ? '<span class="pagenumber"><a href="' + home_page + '">1</a></span>' : '<span class="pagenumber"><a href="/search/label/' + lblname1 + "?&max-results=" + postperpage + '">1</a></span>' : "page" == type ? '<span class="pagenumber"><a href="#" onclick="redirectpage(' + r + ');return false">' + r + "</a></span>" : '<span class="pagenumber"><a href="#" onclick="redirectlabel(' + r + ');return false">' + r + "</a></span>";
-    end < maximum - 1 && (e += ""), end < maximum && (e += "page" == type ? '<span class="pagenumber"><a href="#" onclick="redirectpage(' + maximum + ');return false">' + maximum + "</a></span>" : '<span class="pagenumber"><a href="#" onclick="redirectlabel(' + maximum + ');return false">' + maximum + "</a></span>");
-    var n = parseInt(postnumber) + 1;
-    postnumber < maximum && (e += "page" == type ? '<span class="pagenumber"><a href="#" onclick="redirectpage(' + n + ');return false">' + nextpage + "</a></span>" : '<span class="pagenumber"><a href="#" onclick="redirectlabel(' + n + ');return false">' + nextpage + "</a></span>");
-    for (var t = document.getElementsByName("pageArea"), l = document.getElementById("blog-pager"), p = 0; p < t.length; p++) t[p].innerHTML = e;
-    t && t.length > 0 && (e = ""), l && (l.innerHTML = e)
-}
-
-function paginationall(a) {
-    var e = a.feed,
-        s = parseInt(e.openSearch$totalResults.$t, 10);
-    pagination(s)
-}
-
-function bloggerpage() {
-    var a = urlactivepage; - 1 != a.indexOf("/search/label/") && (lblname1 = -1 != a.indexOf("?updated-max") ? a.substring(a.indexOf("/search/label/") + 14, a.indexOf("?updated-max")) : a.substring(a.indexOf("/search/label/") + 14, a.indexOf("?&max"))), -1 == a.indexOf("?q=") && -1 == a.indexOf(".html") && (-1 == a.indexOf("/search/label/") ? (type = "page", postnumber = -1 != urlactivepage.indexOf("#PageNo=") ? urlactivepage.substring(urlactivepage.indexOf("#PageNo=") + 8, urlactivepage.length) : 1, document.write('<script src="' + home_page + 'feeds/posts/summary?max-results=1&alt=json-in-script&callback=paginationall"></script>')) : (type = "label", -1 == a.indexOf("&max-results=") && (postperpage = 20), postnumber = -1 != urlactivepage.indexOf("#PageNo=") ? urlactivepage.substring(urlactivepage.indexOf("#PageNo=") + 8, urlactivepage.length) : 1, document.write('<script src="' + home_page + "feeds/posts/summary/-/" + lblname1 + '?alt=json-in-script&callback=paginationall&max-results=1" ></script>')))
-}
-
-function redirectpage(a) {
-    jsonstart = (a - 1) * postperpage, nopage = a;
-    var e = document.getElementsByTagName("head")[0],
-        s = document.createElement("script");
-    s.type = "text/javascript", s.setAttribute("src", home_page + "feeds/posts/summary?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), e.appendChild(s)
-}
-
-function redirectlabel(a) {
-    jsonstart = (a - 1) * postperpage, nopage = a;
-    var e = document.getElementsByTagName("head")[0],
-        s = document.createElement("script");
-    s.type = "text/javascript", s.setAttribute("src", home_page + "feeds/posts/summary/-/" + lblname1 + "?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), e.appendChild(s)
-}
-
-function finddatepost(a) {
-    post = a.feed.entry[0];
-    var e = post.published.$t.substring(0, 19) + post.published.$t.substring(23, 29),
-        s = encodeURIComponent(e);
-    if ("page" == type) var r = "/search?updated-max=" + s + "&max-results=" + postperpage + "#PageNo=" + nopage;
-    else var r = "/search/label/" + lblname1 + "?updated-max=" + s + "&max-results=" + postperpage + "#PageNo=" + nopage;
-    location.href = r
-}
-var nopage, type, postnumber, lblname1;
-bloggerpage();
+/**
+ * Forked version of commonly found script in Blogger templates for pagination
+ * Source  :  http://techably.com/blogger-numbered-pagination/12638/
+ * Version : 0.1
+ * Author  : Anonymous, Rahul Arora
+ */
+function showpageCount(json){var thisUrl=home_page_url;var htmlMap=new Array();var thisNum=1;var postNum=1;var itemCount=0;var fFlag=0;var eFlag=0;var html='';var upPageHtml='';var downPageHtml='';for(var i=0,post;post=json.feed.entry[i];i++){var timestamp1=post.published.$t.substring(0,19)+post.published.$t.substring(23,29);timestamp=encodeURIComponent(timestamp1);var title=post.title.$t;if(title!=''){if(itemCount==0||(itemCount%pageCount==(pageCount-1))){if(thisUrl.indexOf(timestamp)!=-1){thisNum=postNum}if(title!='')postNum++;htmlMap[htmlMap.length]='/search?updated-max='+timestamp+'&max-results='+pageCount}}itemCount++}for(var p=0;p<htmlMap.length;p++){if(p>=(thisNum-displayPageNum-1)&&p<(thisNum+displayPageNum)){if(fFlag==0&&p==thisNum-2){if(thisNum==2){upPageHtml='<span class="showpage"><a href="/">'+upPageWord+'</a></span>'}else{upPageHtml='<span class="showpage"><a href="'+htmlMap[p]+'">'+upPageWord+'</a></span>'}fFlag++}if(p==(thisNum-1)){html+='<span class="showpagePoint">'+thisNum+'</span>'}else{if(p==0){html+='<span class="showpageNum"><a href="/">1</a></span>'}else{html+='<span class="showpageNum"><a href="'+htmlMap[p]+'">'+(p+1)+'</a></span>'}}if(eFlag==0&&p==thisNum){downPageHtml='<span class="showpage"> <a href="'+htmlMap[p]+'">'+downPageWord+'</a></span>';eFlag++}}}if(thisNum>1){html=''+upPageHtml+' '+html+' '}html='<div class="showpageArea"><span style="COLOR: #000;" class="showpageOf"> Pages '+(postNum-1)+'</span>'+html;if(thisNum<(postNum-1)){html+=downPageHtml}if(postNum==1)postNum++;html+='</div>';var pageArea=document.getElementsByName("pageArea");var blogPager=document.getElementById("blog-pager");if(postNum<=2){html=''}for(var p=0;p<pageArea.length;p++){pageArea[p].innerHTML=html}if(pageArea&&pageArea.length>0){html=''}if(blogPager){blogPager.innerHTML=html}}function showpageCount2(json){var thisUrl=home_page_url;var htmlMap=new Array();var isLablePage=thisUrl.indexOf("/search/label/")!=-1;var thisLable=isLablePage?thisUrl.substr(thisUrl.indexOf("/search/label/")+14,thisUrl.length):"";thisLable=thisLable.indexOf("?")!=-1?thisLable.substr(0,thisLable.indexOf("?")):thisLable;var thisNum=1;var postNum=1;var itemCount=0;var fFlag=0;var eFlag=0;var html='';var upPageHtml='';var downPageHtml='';var labelHtml='<span class="showpageNum"><a href="/search/label/'+thisLable+'?&max-results='+pageCount+'">';var thisUrl=home_page_url;for(var i=0,post;post=json.feed.entry[i];i++){var timestamp1=post.published.$t.substring(0,19)+post.published.$t.substring(23,29);timestamp=encodeURIComponent(timestamp1);var title=post.title.$t;if(title!=''){if(itemCount==0||(itemCount%pageCount==(pageCount-1))){if(thisUrl.indexOf(timestamp)!=-1){thisNum=postNum}if(title!='')postNum++;htmlMap[htmlMap.length]='/search/label/'+thisLable+'?updated-max='+timestamp+'&max-results='+pageCount}}itemCount++}for(var p=0;p<htmlMap.length;p++){if(p>=(thisNum-displayPageNum-1)&&p<(thisNum+displayPageNum)){if(fFlag==0&&p==thisNum-2){if(thisNum==2){upPageHtml=labelHtml+upPageWord+'</a></span>'}else{upPageHtml='<span class="showpage"><a href="'+htmlMap[p]+'">'+upPageWord+'</a></span>'}fFlag++}if(p==(thisNum-1)){html+='<span class="showpagePoint">'+thisNum+'</span>'}else{if(p==0){html=labelHtml+'1</a></span>'}else{html+='<span class="showpageNum"><a href="'+htmlMap[p]+'">'+(p+1)+'</a></span>'}}if(eFlag==0&&p==thisNum){downPageHtml='<span class="showpage"> <a href="'+htmlMap[p]+'">'+downPageWord+'</a></span>';eFlag++}}}if(thisNum>1){if(!isLablePage){html=''+upPageHtml+' '+html+' '}else{html=''+upPageHtml+' '+html+' '}}html='<div class="showpageArea"><span style="COLOR: #000;" class="showpageOf"> Pages ('+(postNum-1)+')</span>'+html;if(thisNum<(postNum-1)){html+=downPageHtml}if(postNum==1)postNum++;html+='</div>';var pageArea=document.getElementsByName("pageArea");var blogPager=document.getElementById("blog-pager");if(postNum<=2){html=''}for(var p=0;p<pageArea.length;p++){pageArea[p].innerHTML=html}if(pageArea&&pageArea.length>0){html=''}if(blogPager){blogPager.innerHTML=html}}var home_page_url=location.href;var thisUrl=home_page_url;if(thisUrl.indexOf("/search/label/")!=-1){if(thisUrl.indexOf("?updated-max")!=-1){var lblname1=thisUrl.substring(thisUrl.indexOf("/search/label/")+14,thisUrl.indexOf("?updated-max"))}else{var lblname1=thisUrl.substring(thisUrl.indexOf("/search/label/")+14,thisUrl.indexOf("?&max"))}}var home_page="/";if(thisUrl.indexOf("?q=")==-1){if(thisUrl.indexOf("/search/label/")==-1){document.write('<script src="'+home_page+'feeds/posts/summary?alt=json-in-script&callback=showpageCount&max-results=99999" ><\/script>')}else{document.write('<script src="'+home_page+'feeds/posts/full/-/'+lblname1+'?alt=json-in-script&callback=showpageCount2&max-results=99999" ><\/script>')}}
