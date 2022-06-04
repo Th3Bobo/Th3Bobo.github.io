@@ -2496,8 +2496,8 @@ quotes[830] = "Interestingly, Dieter Hammerlash of the Mongrel Horde is one of t
 authors[830] = "";
 
 //calculate a random index
-//index = Math.floor(Math.random() * quotes.length);
-index = 214
+index = Math.floor(Math.random() * quotes.length);
+//index = 214
 //display the quotation
 if (titles[index]){document.getElementById("HTML4Head").innerHTML = titles[index];}
 document.getElementById("HTML4Body").innerHTML = quotes[index];
