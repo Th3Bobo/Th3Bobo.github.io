@@ -175,7 +175,7 @@ h3.home-title{display:none}
 max-height:100%;margin:0;}
 .header-logo h1{color:var(--titleColour);font-size:20px;line-height:1.4em;margin:0}
 .header-logo p{font-size:12px;margin:5px 0 0}
-.header-widget h1{border-radius:4px;background:var(--bodyLinkColour);display:block;color:#fff; font-family:'Marquette';text-align: center; font-size:165%;padding: 10px 0px;}
+.header-widget h1{border-radius:4px;background:var(--bodyLinkColour);display:block;color:#fff; font-family:'Marquette';text-align: center; font-size:185%;padding: 10px 0px;}
 .header-widget p{border-radius:4px;background-color:var(--redColour);display:block;color:#fff;font-family:'BrothersRegular';text-align: center; font-size:120%; padding: 5px 10px;}
 /*-- Blog-Pager CSS --*/
 
