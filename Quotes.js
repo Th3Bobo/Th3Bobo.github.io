@@ -2499,10 +2499,8 @@ authors[830] = "";
 index = Math.floor(Math.random() * quotes.length);
 //index = 817
 //display the quotation
-document.write("&lt;DL&gt;\n");
-if (titles[index]){document.write("&lt;h3&gt;" + titles[index] + "&lt;/h3&gt;");}
-document.write("—" + "\"" + quotes[index] + "\"\n");
-if (authors[index]){document.write("&lt;DD&gt;" + "— " + authors[index] + "\n");}
-document.write("&lt;/DL&gt;\n");
+if (titles[index]){document.getElementById("HTML4Head").innerHTML = titles[index];}
+document.getElementById("HTML4Body").innerHTML = quotes[index];
+if (authors[index]){document.getElementById("HTML4Foot").innerHTML = "— " + authors[index];}
 
 //done
