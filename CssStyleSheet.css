@@ -619,11 +619,11 @@ nav.topnav a.active {
 }
 .topnav {
   overflow: hidden;
+  .topnav a:not(:first-child) {display: none;}
   background-color: var(--menuColour);
 }
 
 @media screen and (max-width: var(--menuWidth)px) {
-  .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
