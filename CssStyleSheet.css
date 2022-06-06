@@ -619,29 +619,24 @@ nav.topnav a.active {
 }
 .topnav {
   overflow: hidden;
-
   background-color: var(--menuColour);
 }
-.topnav a:not(:first-child) {display: none;}
-@media screen and (max-width: var(--menuWidth)px) {
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
 
-@media screen and (max-width: var(--menuWidth)px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+	float: right;
+	display: block;
+}
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.topnav.responsive a {
+	float: none;
+	display: block;
+	text-align: left;
 }
 /*-------Skin above style below-------*/
 /*-------Typography and ShortCodes-------*/
