@@ -151,7 +151,6 @@ h3.home-title{display:none}
 .social .vk a:before{content:"\f189"}
 .social .dribbble a:before{content:"\f17d"}
 .social .instagram a:before{content:"\f16d"}
-.social .pinterest a:before{content:"\f0d2"}
 .social .reddit a:before{content:"\f1a1"}
 .social .email a:before{content:"\f0e0"}
 .social .external-link a:before{content:"\f35d"}
@@ -160,7 +159,6 @@ h3.home-title{display:none}
 .social-color .twitter a{background-color:#00acee}
 .social-color .youtube a{background-color:#f50000}
 .social-color .instagram a{background:linear-gradient(15deg,#ffb13d,#dd277b,#4d5ed4)}
-.social-color .pinterest a{background-color:#ca2127}
 .social-color .tumblr a{background-color:#365069}
 .social-color .rss a{background-color:#ffc200}
 .social-color .vk a{background-color:#4a76a8}
