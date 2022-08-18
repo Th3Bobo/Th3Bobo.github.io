@@ -665,8 +665,8 @@ blockquote{
     padding:10px 15px
 }
 blockquote:before{
-    content:&#39;
-    \f10d&#39;
+    content:'
+    \f10d'
     ;
     display:inline-block;
     font-family:FontAwesome;
@@ -679,8 +679,8 @@ blockquote:before{
     color:#888
 }
 blockquote:after{
-    content:&#39;
-    \f10e&#39;
+    content:'
+    \f10e'
     ;
     display:inline-block;
     font-family:FontAwesome;
@@ -743,8 +743,8 @@ a.button{
     clear:both
 }
 .demo:before{
-    content:&quot;
-    \f06e&quot;
+    content:"
+    \f06e"
     ;
     margin-right:5px;
     display:inline-block;
@@ -756,8 +756,8 @@ a.button{
     -moz-osx-font-smoothing:grayscale
 }
 .download:before{
-    content:&quot;
-    \f019&quot;
+    content:"
+    \f019"
     ;
     margin-right:5px;
     display:inline-block;
@@ -769,8 +769,8 @@ a.button{
     -moz-osx-font-smoothing:grayscale
 }
 .visit:before{
-    content:&quot;
-    \f14c&quot;
+    content:"
+    \f14c"
     ;
     margin-right:5px;
     display:inline-block;
@@ -791,15 +791,15 @@ a.button{
     line-height:1.5
 }
 .post-body ul li:before{
-    content:&quot;
-    \f105&quot;
+    content:"
+    \f105"
     ;
     margin-right:5px;
     font-family:fontawesome
 }
 pre:before{
-    content:&#39;
-    Code&#39;
+    content:'
+    Code'
     ;
     display:block;
     background:#F7F7F7;
@@ -951,20 +951,20 @@ pre .cl{
     color:#F55D5D
 }
 .fa-check-circle:before{
-    content:&quot;
-    \f058&quot;
+    content:"
+    \f058"
 }
 .fa-info-circle:before{
-    content:&quot;
-    \f05a&quot;
+    content:"
+    \f05a"
 }
 .fa-exclamation-triangle:before{
-    content:&quot;
-    \f071&quot;
+    content:"
+    \f071"
 }
 .fa-exclamation-circle:before{
-    content:&quot;
-    \f06a&quot;
+    content:"
+    \f06a"
 }
 .post-table table{
     border-collapse:collapse;
@@ -1112,12 +1112,12 @@ border-image-repeat: stretch;
 }
 
 .cookie-choices-text {
-font-family: &#39;CaslonAntique&#39;;
+font-family: 'CaslonAntique';
 font-size:20px !important;
 color: #000000 !important;
 padding-bottom:1em;}
 
-.cookie-choices-button{font-family: &#39;CaslonAntique&#39;;
+.cookie-choices-button{font-family: 'CaslonAntique';
 text-shadow: 3px 3px #909090;
 color: #3a220d !important;
 font-size:20px !important;
@@ -1138,7 +1138,7 @@ box-shadow: 0px 0px 0px transparent !important;
 }
 
 #headerLine{
-font-family: &#39;CaslonAntique&#39;;
+font-family: 'CaslonAntique';
 font-size: 50px;
 font-weight: bold;
 text-align: center;
@@ -1156,7 +1156,7 @@ font-size: 15px;
 #rCb{
 text-align: right;
 margin: 0 auto 0;
-font-family: &#39;BrothersRegular&#39;;
+font-family: 'BrothersRegular';
 font-weight: Bold;
 font-size:2;
 }
@@ -1208,7 +1208,7 @@ margin-top: 30px
 	background:-o-linear-gradient(top, #b4171f 5%, #8d1612 100%);
 	background:-ms-linear-gradient(top, #b4171f 5%, #8d1612 100%);
 	background:linear-gradient(to bottom, #b4171f 5%, #8d1612 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#b4171f&#39;, endColorstr=&#39;#8d1612&#39;,GradientType=0);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4171f', endColorstr='#8d1612',GradientType=0);
 	background-color:#b4171f;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
@@ -1217,7 +1217,7 @@ margin-top: 30px
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family: &#39;BrothersRegular&#39;;
+	font-family: 'BrothersRegular';
 	font-size:20px;
 	padding:7px 18px;
 	text-decoration:none;
@@ -1231,7 +1231,7 @@ margin-top: 30px
 	background:-o-linear-gradient(top, #8d1612 5%, #b4171f 100%);
 	background:-ms-linear-gradient(top, #8d1612 5%, #b4171f 100%);
 	background:linear-gradient(to bottom, #8d1612 5%, #b4171f 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#8d1612&#39;, endColorstr=&#39;#b4171f&#39;,GradientType=0);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8d1612', endColorstr='#b4171f',GradientType=0);
 	background-color:#8d1612;
 }
 #generatorbtn:active{
@@ -1300,7 +1300,7 @@ background: url(https://lh3.googleusercontent.com/-BgkjOjZUoZw/VIG9JhRoJlI/AAAAA
 background-clip: padding-box;
 -webkit-calc(1em + 1px);
 padding: calc(1em + 1px);
-font-family: &#39;CaslonAntique&#39;;
+font-family: 'CaslonAntique';
 font-size:17px;
 }
 
@@ -1315,7 +1315,7 @@ background: url(https://lh3.googleusercontent.com/-BgkjOjZUoZw/VIG9JhRoJlI/AAAAA
 background-clip: padding-box;
 -webkit-calc(1em + 1px);
 padding: calc(1em + 1px);
-font-family: &#39;CaslonAntique&#39;;
+font-family: 'CaslonAntique';
 font-size:17px;
 }
 
@@ -1363,7 +1363,7 @@ width: 50px;}
     text-align: center;
     vertical-align: top;
     padding-bottom: 80px;
-    font-family: &#39;BrothersRegular&#39;;
+    font-family: 'BrothersRegular';
 	font-weight: Bold;
 	font-size:2;
 }
@@ -1412,7 +1412,7 @@ width: 50px;}
     vertical-align: top;
     padding-top: 10px;
     font-size:2;
-    font-family: &#39;BrothersRegular&#39;;
+    font-family: 'BrothersRegular';
     font-weight: Bold;
 
 }
@@ -1445,7 +1445,7 @@ width: 50px;}
 }
 
 #checkboxline label {
-   font-family: &#39;BrothersRegular&#39;;
+   font-family: 'BrothersRegular';
 	font-weight: Bold;
 	font-size:2;
 }
@@ -1482,7 +1482,7 @@ width: 50px;}
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		font-family: &#39;BrothersRegular&#39;;
+		font-family: 'BrothersRegular';
 		font-weight: Bold;
 		font-size:2;
 
@@ -1661,7 +1661,7 @@ div.subscribe {
 }
 
 div.subscribe div.top {
-    filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;https://resources.blogblog.com/img/widgets/s_top.png&#39;, sizingMethod=&#39;crop&#39;);
+    filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='https://resources.blogblog.com/img/widgets/s_top.png', sizingMethod='crop');
     font-size: 1em;
     padding: 4px 0 1px;
     width:144px
@@ -1686,7 +1686,7 @@ div.subscribe div.top span.inner {
 }
 
 div.subscribe div.bottom {
-    filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;https://resources.blogblog.com/img/widgets/s_bottom.png&#39;, sizingMethod=&#39;crop&#39;);
+    filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='https://resources.blogblog.com/img/widgets/s_bottom.png', sizingMethod='crop');
     font-size: 3px;
     height: 3px;
     line-height:0
