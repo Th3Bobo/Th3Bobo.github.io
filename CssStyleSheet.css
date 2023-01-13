@@ -1801,4 +1801,19 @@ a.feed-reader-link {
 .label-count{white-space:nowrap !important;}
 .label-size{line-height:1.2 !important;}
 
-#related-wrap{overflow:hidden;margin:0 0 30px}
+#related-wrap{overflow:hidden;margin:0 0 30px;}
+
+#bego, #endo{
+     width: 80px;
+ } 
+#begoL, #endoL,{
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 10px;
+    font-size:2;
+    font-family: 'BrothersRegular';
+    font-weight: Bold;
+    }
