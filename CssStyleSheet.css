@@ -1512,7 +1512,8 @@ width: 50px;}
   color: var(--redColour);
   padding-left: 5px;
   width:60%;
-  font-weight: 400;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .toc-header-col2 {
