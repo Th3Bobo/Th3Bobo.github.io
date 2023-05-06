@@ -1506,11 +1506,13 @@ width: 50px;}
   width:100%;
   margin-top:10px;
 }
+
 .toc-header-col1, .toc-header-col2, .toc-header-col3 {
-  background: #d0c4b4;
+  background: var(--menuColour);
   color: #000000;
   padding-left: 5px;
   width:60%;
+  height:200%;
 }
 .toc-header-col2 {
   width:20%;
