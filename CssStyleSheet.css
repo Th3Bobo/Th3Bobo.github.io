@@ -1509,11 +1509,16 @@ width: 50px;}
 
 .toc-header-col1, .toc-header-col2, .toc-header-col3 {
   background: var(--menuColour);
-  color: #000000;
+  color: var(--redColour);
   padding-left: 5px;
   width:60%;
-  height:200%;
+  font-weight: 400;
 }
+
+.toc-header-col1, .toc-header-col2, .toc-header-col3 li a{background:var(--menuColour);display:block;color:var(--redColour); font-family:'Marquette'; font-weight:400;padding-left: 5px;transition:all .17s ease; text-decoration: none;}
+.toc-header-col1, .toc-header-col2, .toc-header-col3 li a:hover{color:#fff;background-color:var(--redHoverColour);}
+
+
 .toc-header-col2 {
   width:20%;
 }
