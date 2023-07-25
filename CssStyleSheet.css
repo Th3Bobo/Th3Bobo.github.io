@@ -657,13 +657,16 @@ nav.topnav a.active {
 blockquote{
     font-family: 'BrothersRegular';
     color:white;
-    background: #173d7c;
+    background: var(--blueColour);
     margin-left:0;
     padding:10px 15px
 }
 blockquote .hl{
     font-family: 'Marquette';
-    text-decoration: overline underline;}
+    font-size: Larger;
+    text-decoration: overline underline;
+
+}
 blockquote:before{
     content:'
     \f10d'
