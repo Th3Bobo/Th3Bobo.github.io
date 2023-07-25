@@ -661,6 +661,9 @@ blockquote{
     margin-left:0;
     padding:10px 15px
 }
+blockquote .hl{
+    font-family: 'Marquette';
+    text-decoration: overline underline;}
 blockquote:before{
     content:'
     \f10d'
