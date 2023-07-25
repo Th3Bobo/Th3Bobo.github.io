@@ -15,6 +15,7 @@
   --whiteBackgroundColour: #f8f3e9;
   --shadedBackgroundColour: #d0c4b4;
   --redColour: #8d1612;
+  --blueColour: #173d7c;
   --redHoverColour: #b4171e;
 }
 @font-face {
@@ -654,7 +655,7 @@ nav.topnav a.active {
     color:#2c3e50
 }
 blockquote{
-    font-family: 'BrothersRegular'; 
+    font-family: 'BrothersRegular';
     color:white;
     background: #173d7c;
     margin-left:0;
