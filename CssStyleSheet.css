@@ -658,6 +658,7 @@ nav.topnav a.active {
 }
 blockquote{
     font-style:italic;
+    background: var(--blueColour);
     color: var(--whiteTextColour);
     border-left:5px solid var(--whiteTextColour);
     margin: 0;
