@@ -645,7 +645,7 @@ nav.topnav a.active {
     color:white;
     background: var(--blueColour);
     margin-left:0;
-    padding:10px 15px
+    padding:10px 15px 25px 15px;
 }
 .dyk .hl{
     font-family: 'Marquette';
