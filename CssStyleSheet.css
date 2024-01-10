@@ -142,10 +142,8 @@ h3.home-title{display:none}
 .social .twitter a:before{content:"\f099"}
 .social .rss a:before{content:"\f09e"}
 .social .youtube a:before{content:"\f167"}
-.social .stumbleupon a:before{content:"\f1a4"}
 .social .tumblr a:before{content:"\f173"}
 .social .vk a:before{content:"\f189"}
-.social .dribbble a:before{content:"\f17d"}
 .social .instagram a:before{content:"\f16d"}
 .social .reddit a:before{content:"\f1a1"}
 .social .email a:before{content:"\f0e0"}
@@ -424,7 +422,8 @@ ul.social-counter{margin:0 -5px}
 }
 .widget ul li, .widget #ArchiveList ul.flat li {
   text-indent: 0;
-  border-top: dashed 1px color:#20124d;
+  border-top: dashed 1px; 
+  border-color: #20124d;
 }
 .widget ul li:first-child, .widget #ArchiveList ulflat li:first-child {
   border-top: none;
@@ -526,7 +525,7 @@ ul.social-counter{margin:0 -5px}
 #header-wrap{padding:0}
 .header-header{background-color:var(--whiteBackgroundColour);padding:0;}
 .header-header .container.row{width:100%;
-height 160px;}
+height: 160px;}
 #header-inner a{display:inline-block!important}
 #main-wrapper{width:100%;padding:0}
 #sidebar-wrapper{width:100%;padding:0}
@@ -739,9 +738,7 @@ a.button{
     clear:both
 }
 .demo:before{
-    content:"
-    \f06e"
-    ;
+    content:"\f06e";
     margin-right:5px;
     display:inline-block;
     font-family:FontAwesome;
@@ -752,9 +749,7 @@ a.button{
     -moz-osx-font-smoothing:grayscale
 }
 .download:before{
-    content:"
-    \f019"
-    ;
+    content:"\f019";
     margin-right:5px;
     display:inline-block;
     font-family:FontAwesome;
@@ -765,9 +760,7 @@ a.button{
     -moz-osx-font-smoothing:grayscale
 }
 .visit:before{
-    content:"
-    \f14c"
-    ;
+    content:"\f14c";
     margin-right:5px;
     display:inline-block;
     font-family:FontAwesome;
@@ -787,16 +780,12 @@ a.button{
     line-height:1.5
 }
 .post-body ul li:before{
-    content:"
-    \f105"
-    ;
+    content:"\f105";
     margin-right:5px;
     font-family:fontawesome
 }
 pre:before{
-    content:'
-    Code'
-    ;
+    content:'Code';
     display:block;
     background:#F7F7F7;
     margin-left:-7px;
@@ -947,20 +936,16 @@ pre .cl{
     color:#F55D5D
 }
 .fa-check-circle:before{
-    content:"
-    \f058"
+    content:"\f058";
 }
 .fa-info-circle:before{
-    content:"
-    \f05a"
+    content:"\f05a";
 }
 .fa-exclamation-triangle:before{
-    content:"
-    \f071"
+    content:"\f071";
 }
 .fa-exclamation-circle:before{
-    content:"
-    \f06a"
+	content:"\f06a";
 }
 .post-table table{
     border-collapse:collapse;
