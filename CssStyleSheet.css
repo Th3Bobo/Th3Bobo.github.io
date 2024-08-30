@@ -1721,3 +1721,4 @@ table.center {
     margin-left:auto; 
     margin-right:auto;
   }
+playbtn{font-size:13px;color:#fff;border-radius:3px;position:relative;float:left;height:32px;background-color:var(--redColour);display:block;margin:0 0 20px}
