@@ -1721,4 +1721,12 @@ a.feed-reader-link {
     margin-left:auto; 
     margin-right:auto;
   }
-.playbtn{font-size:13px;color:#fff;border-radius:3px;height:32px;background-color:var(--redColour);display:block;margin:0 0 20px}
+.playbtn{font-size:13px;
+    color:#fff;
+    webkit-border-radius:5px;
+    moz-border-radius:5px;
+    border-radius:5px;
+    border-radius:5px;
+    height:25px;
+    background-color:var(--redColour);
+    margin:0 0 10px}
