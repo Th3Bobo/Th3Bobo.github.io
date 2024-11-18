@@ -1177,7 +1177,7 @@ margin-top: 30px;
   border-bottom: none;
 }
 
-.table table {
+.mtable table {
   border-collapse: collapse;
   border: medium;
   font-family: BrothersRegular;
@@ -1185,7 +1185,7 @@ margin-top: 30px;
   table-layout: fixed;
   width: 0px;"
 }
-.table th, td{
+.mtable th, td{
   border-color: black;
   border-style: solid;
   border-width: 1px;
@@ -1204,11 +1204,11 @@ margin-top: 30px;
   font-weight: bold;
 }
 
-.table tr{
+.mtable tr{
   height: 30px;
   background-color: #d4c29c45;
 }
-.table tr:nth-child(odd) {
+.mtable tr:nth-child(odd) {
   background-color: #d4c29c90;
 }
 
