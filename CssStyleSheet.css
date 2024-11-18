@@ -1175,7 +1175,7 @@ margin-top: 30px;
 #originTable tr:last-child {
   border-bottom: none;
 }
-.sprtable table {
+.sprtable {
   border-collapse: collapse;
   border: medium;
   font-family: BrothersRegular;
@@ -1183,7 +1183,7 @@ margin-top: 30px;
   table-layout: fixed;
   width: 0px;"
 }
-.sprtable th, td{
+.sprtable th, .sprtable td{
   border-color: black;
   border-style: solid;
   border-width: 1px;
@@ -1215,6 +1215,9 @@ margin-top: 30px;
 }
 .table {
   border: none;
+}
+.table th{
+  padding-top:15px;
 }
 .sprtable tr:nth-child(odd), #originTable tr:nth-child(odd), .table tr:nth-child(odd) {
   background-color: #d4c29c90;
