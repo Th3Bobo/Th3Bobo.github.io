@@ -208,7 +208,7 @@ function displayToc(filter) {
    tocTable += '</th>';
    tocTable += '<th class="toc-header-col3">';
    tocTable += '<a href="javascript:allPosts();" title="' + tocTool3 + '">' + tocHead3 + '</a>';
-   tocTable += '</th	>';
+   tocTable += '</th>';
    tocTable += '</tr>';
    for (var i = 0; i < postTitle.length; i++) {
       if (filter == '') {

@@ -1165,7 +1165,6 @@ font-size: 20px;
 font-weight: normal;
 margin-top: 30px;
 }
-
 #originTable tr { 
   border: dashed;
   border-width: 1px 0;
@@ -1176,7 +1175,6 @@ margin-top: 30px;
 #originTable tr:last-child {
   border-bottom: none;
 }
-
 .sprtable table {
   border-collapse: collapse;
   border: medium;
@@ -1194,24 +1192,33 @@ margin-top: 30px;
   vertical-align: middle;
 }
 .blue th {
-  background-color: #173d7c;
+  background-color: var(--blueColour);
+  color: white;
+  font-weight: bold;
+}
+.blue a {
   color: white;
   font-weight: bold;
 }
 .red th{
-  background-color: #8d1612;
+  background-color: var(--redColour);
   color: white;
   font-weight: bold;
 }
-
 .sprtable tr{
   height: 30px;
   background-color: #d4c29c45;
 }
-.sprtable tr:nth-child(odd), #originTable tr:nth-child(odd) {
+.table tr{
+  height: 45px;
+  background-color: #d4c29c45;
+}
+.table {
+  border: none;
+}
+.sprtable tr:nth-child(odd), #originTable tr:nth-child(odd), .table tr:nth-child(odd) {
   background-color: #d4c29c90;
 }
-
 .pbtn, #generatorbtn{
 	-moz-box-shadow:inset 0px 0px 0px 2px #a34441;
 	-webkit-box-shadow:inset 0px 0px 0px 2px #a34441;
