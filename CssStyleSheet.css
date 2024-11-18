@@ -1216,9 +1216,6 @@ margin-top: 30px;
 .table {
   border: none;
 }
-.table th{
-  padding-top:15px;
-}
 .sprtable tr:nth-child(odd), #originTable tr:nth-child(odd), .table tr:nth-child(odd) {
   background-color: #d4c29c90;
 }
@@ -1510,6 +1507,7 @@ color:white;
   color:white;
 }
 .toc-entry-col1, .toc-entry-col2, .toc-entry-col3 {
+  padding-top: 5px;
   padding-left: 5px;
   font-size:14px;
 }
