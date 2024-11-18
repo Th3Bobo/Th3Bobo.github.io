@@ -199,7 +199,7 @@ function displayToc(filter) {
       tocTool3 = 'Click to show all posts';
    }
    tocTable += '<table class="table table-hover">';
-   tocTable += '<tr>';
+   tocTable += '<tr class="blue">';
    tocTable += '<td class="toc-header-col1">';
    tocTable += '<a href="javascript:toggleTitleSort();" title="' + tocTool1 + '">' + tocHead1 + '</a>';
    tocTable += '</td>';

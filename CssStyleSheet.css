@@ -422,7 +422,7 @@ ul.social-counter{margin:0 -5px}
 }
 .widget ul li, .widget #ArchiveList ul.flat li {
   text-indent: 0;
-  border-top: dashed 1px; 
+  border-top: none; 
   border-color: #20124d;
 }
 .widget ul li:first-child, .widget #ArchiveList ulflat li:first-child {
@@ -1177,7 +1177,7 @@ margin-top: 30px;
   border-bottom: none;
 }
 
-.mtable table {
+.sprtable table {
   border-collapse: collapse;
   border: medium;
   font-family: BrothersRegular;
@@ -1185,7 +1185,7 @@ margin-top: 30px;
   table-layout: fixed;
   width: 0px;"
 }
-.mtable th, td{
+.sprtable th, td{
   border-color: black;
   border-style: solid;
   border-width: 1px;
@@ -1204,11 +1204,11 @@ margin-top: 30px;
   font-weight: bold;
 }
 
-.mtable tr{
+.sprtable tr{
   height: 30px;
   background-color: #d4c29c45;
 }
-.mtable tr:nth-child(odd) {
+.sprtable tr:nth-child(odd), #originTable tr:nth-child(odd) {
   background-color: #d4c29c90;
 }
 
