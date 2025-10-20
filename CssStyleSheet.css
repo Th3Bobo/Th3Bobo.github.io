@@ -140,6 +140,8 @@ h3.home-title{display:none}
 .social .blogger a:before{content:"\f37d"}
 .social .facebook a:before{content:"\f09a"}
 .social .twitter a:before{content:"\f099"}
+.social .bluesky a:before{content:"\e671"}
+.social .whatsapp a:before{content:"\f232"}
 .social .rss a:before{content:"\f09e"}
 .social .youtube a:before{content:"\f167"}
 .social .tumblr a:before{content:"\f173"}
@@ -151,6 +153,8 @@ h3.home-title{display:none}
 .social-color .blogger a{background-color:#ff5722}
 .social-color .facebook a{background-color:#3b5999}
 .social-color .twitter a{background-color:#00acee}
+.social-color .bluesky a{background-color:#01AAFF}
+.social-color .whatsapp a{background-color:#25d366}
 .social-color .youtube a{background-color:#f50000}
 .social-color .instagram a{background:linear-gradient(15deg,#ffb13d,#dd277b,#4d5ed4)}
 .social-color .tumblr a{background-color:#365069}
