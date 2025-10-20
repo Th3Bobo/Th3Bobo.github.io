@@ -50,8 +50,8 @@ function loadtoc(json) {
          // get the posttitle from the entry
             var posttitle = entry.title.$t;
 
-         // get the post date from the entry
-            var postdate = (entry.published.$t.substring(0,10) + 2380-00-00);
+         // get the post date from the entry + 480
+            var postdate = new Date(new Date(entry.published.$t.substring(0, 10)).setFullYear(new Date(entry.published.$t.substring(0, 10)).getFullYear() + 480)).toISOString().substring(0, 10);
 
          // get the post url from the entry
             var posturl;
