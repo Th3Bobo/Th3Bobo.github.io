@@ -7,7 +7,7 @@
   --titleHover: #b4171e;
   --footerColour: #edfaff;
   --bodyBackgroundColour: #f6f6f6;
-  --bodyBackground: var(bodyBackgroundColour) url() repeat fixed top left;
+  /* --bodyBackground: var(bodyBackgroundColour) url() repeat fixed top left; */
   --bodyTextColour: #0e0e0b;
   --bodyLinkColour: #2c407c;
   --linkVisitedColour: #1e2c56;
@@ -201,7 +201,17 @@ body.dark input, body.dark textarea {
 }
 #theme-toggle:hover{background-color:var(--redHoverColour);}
 
-body{background:var(--bodyBackground);background-color:var(--bodyBackgroundColour);font-family:'BrothersRegular';font-size:14px;font-weight:400;color:var(--bodyTextColour);word-wrap:break-word;margin:0;padding:0;transition: background-color 0.3s ease, color 0.3s ease;}
+body{
+    /* background:var(--bodyBackground); */
+    background-color:var(--bodyBackgroundColour);
+    font-family:'BrothersRegular';
+    font-size:14px;
+    font-weight:400;
+    color:var(--bodyTextColour);
+    word-wrap:break-word;
+    margin:0;
+    padding:0;
+    transition: background-color 0.3s ease, color 0.3s ease;}
 #outer-wrapper{margin:0 auto;background-color:var(--whiteBackgroundColour);box-shadow:0 0 5px rgba(0,0,0,.1)}
 .row{margin:0 auto;width:1120px}
 h3.home-title{display:none}
