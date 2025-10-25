@@ -132,7 +132,6 @@ abbr{
     background-color: #3e3e40; /* Dark footer background */
     color: #e2e2e2c7; /* Light footer text */
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
-  
   }
   #content-wrapper {
     background-color: #4A4A4D; /* Dark content background */
@@ -144,17 +143,14 @@ abbr{
   h1, h2, h3 {
     color: #ffffffc7; /* White text for headings */
   }
-
   a {
     color: #5ac8fa; /* Bright blue for links */
   }
-
   button {
     background-color: #1212121a; /* Dark button background */
     color: #ffffffc7; /* Light button text */
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
   }
-
   input, textarea {
     background-color: #1212121a; /* Dark background for inputs */
     color: #ffffffc7; /* Light text for inputs */
@@ -166,7 +162,21 @@ abbr{
   separator-color: rgb(111, 111, 111);
   assistant-sidebar-color: rgb(111, 111, 111);
 }
-
+#theme-toggle{
+    display: inline-block;
+    height: 34px;
+    background-color:var(--bodyLinkColour);
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 34px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin: 0;
+    border: 1px solid rgba(0,0,0,.1);
+    border-bottom-width: 2px;
+    border-radius: 2px;
+}
 
 body{background:var(--bodyBackground);background-color:var(--bodyBackgroundColour);font-family:'BrothersRegular';font-size:14px;font-weight:400;color:var(--bodyTextColour);word-wrap:break-word;margin:0;padding:0;transition: background-color 0.3s ease, color 0.3s ease;}
 #outer-wrapper{margin:0 auto;background-color:var(--whiteBackgroundColour);box-shadow:0 0 5px rgba(0,0,0,.1)}
