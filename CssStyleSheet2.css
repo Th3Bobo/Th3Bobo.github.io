@@ -192,12 +192,14 @@ body.dark input, body.dark textarea {
     font-weight: 400;
     line-height: 34px;
     box-sizing: border-box;
-    padding: 0 30px;
+    padding: 0 5px;
     margin: 0;
     border: 1px solid rgba(0,0,0,.1);
     border-bottom-width: 2px;
     border-radius: 2px;
+    font-family: 'BrothersRegular';
 }
+#theme-toggle:hover{background-color:var(--redHoverColour);}
 
 body{background:var(--bodyBackground);background-color:var(--bodyBackgroundColour);font-family:'BrothersRegular';font-size:14px;font-weight:400;color:var(--bodyTextColour);word-wrap:break-word;margin:0;padding:0;transition: background-color 0.3s ease, color 0.3s ease;}
 #outer-wrapper{margin:0 auto;background-color:var(--whiteBackgroundColour);box-shadow:0 0 5px rgba(0,0,0,.1)}
