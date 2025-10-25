@@ -125,21 +125,21 @@ abbr{
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #323233;
+    background-color: #323233!important;
     color: #ffffffc7;
   }
   #footer-wrapper{
-    background-color: #3e3e40; /* Dark footer background */
-    color: #e2e2e2c7; /* Light footer text */
+    background-color: #3e3e40!important;
+    color: #e2e2e2c7;
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
   }
   #content-wrapper {
-    background-color: #4A4A4D; /* Dark content background */
-    color: #ffffffc7; /* Light content text */
+    background-color: #4A4A4D;
+    color: #ffffffc7;
     box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.24);
   }
   .sidebar .widget{background-color:#4A4A4D!important;}
-  #outer-wrapper{background-color:#323233!important;}
+  #outer-wrapper{background-color:#4A4A4D!important;}
   h1, h2, h3 {
     color: #ffffffc7;
   }
@@ -164,7 +164,7 @@ abbr{
 }
 /* Dark Mode */
 body.dark {
-  background-color: #323233;
+  background-color: #323233!important;
     color: #ffffffc7; 
 }
 body.dark h1, body.dark h2, body.dark h3 {
