@@ -125,10 +125,10 @@ abbr{
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #323233; /* Dark background */
-    color: #ffffffc7; /* Light text */
+    background-color: #323233;
+    color: #ffffffc7;
   }
-  #footer-wrapper {
+  #footer-wrapper{
     background-color: #3e3e40; /* Dark footer background */
     color: #e2e2e2c7; /* Light footer text */
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
@@ -141,26 +141,47 @@ abbr{
   .sidebar .widget{background-color:#4A4A4D;}
   #outer-wrapper{background-color:#323233;}
   h1, h2, h3 {
-    color: #ffffffc7; /* White text for headings */
+    color: #ffffffc7;
   }
   a {
-    color: #5ac8fa; /* Bright blue for links */
+    color: #5ac8fa;
   }
   button {
-    background-color: #1212121a; /* Dark button background */
-    color: #ffffffc7; /* Light button text */
+    background-color: #1212121a;
+    color: #ffffffc7;
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
   }
   input, textarea {
-    background-color: #1212121a; /* Dark background for inputs */
-    color: #ffffffc7; /* Light text for inputs */
-    border: 1px solid #6f6f6f; /* Lighter border for inputs */
+    background-color: #1212121a;
+    color: #ffffffc7;
+    border: 1px solid #6f6f6f;
   }
   narrow-assistant-background-color: rgba(18, 18, 18, 0.1);
   assistant-secondary-color: rgba(255, 255, 255, 0.39);
   horizontal-line-color: rgb(111, 111, 111);
   separator-color: rgb(111, 111, 111);
   assistant-sidebar-color: rgb(111, 111, 111);
+}
+/* Dark Mode */
+body.dark {
+  background-color: #323233;
+    color: #ffffffc7; 
+}
+body.dark h1, body.dark h2, body.dark h3 {
+  color: #ffffffc7;
+}
+body.dark a {
+  color: #2c407c;
+}
+body.dark button {
+  background-color: #1212121a;
+    color: #ffffffc7;
+    box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
+}
+body.dark input, body.dark textarea {
+  background-color: #1212121a;
+    color: #ffffffc7;
+    border: 1px solid #6f6f6f;
 }
 #theme-toggle{
     display: inline-block;
