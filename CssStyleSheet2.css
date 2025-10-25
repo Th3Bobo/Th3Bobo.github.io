@@ -2,7 +2,7 @@
   --menuWidth: 945;
   --mainColour: #dccab1;
   --mainDarkColour: #000000;
-  --menuColour: #173d7c;
+  --menuColour: #2c407c;
   --menuOldColour: #eee0c3;
   --titleColour: #000000;
   --titleHover: #b4171e;
@@ -149,16 +149,16 @@ abbr{
   h1, h2, h3 {
     color: var(--darkModeTextColour);
   }
-  .post-snippet{color:#e2e2e2c7;}
+  .post-snippet{color:#e2e2e2c7!important;}
   a {
-    color: var(--redColour);
+    color: var(--redHoverColour);
   }
   button {
     background-color: #1212121a;
     color: var(--darkModeTextColour);
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
   }
-  input, textarea {
+  textarea {
     background-color: #1212121a!important;
     color: var(--darkModeTextColour);
     border: 1px solid #6f6f6f;
@@ -178,7 +178,7 @@ body.dark h1, body.dark h2, body.dark h3 {
   color: var(--darkModeTextColour);
 }
 body.dark a {
-  color: var(--redColour);
+  color: var(--redHoverColour);
 }
 body.dark button {
   background-color: #1212121a;
