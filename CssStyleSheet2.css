@@ -19,6 +19,10 @@
   --whiteTextColour: #fff;
   --redTextColour: #9E0E06;
   --redHoverColour: #b4171e;
+  --darkModeBackgroundColour: #4A4A4D;
+  --darkModeDarkerBackgroundColour: #323233;
+  --darkModeTextColour: #ffffffc7;
+    
 }
 @font-face {
   font-family: 'Libre Baskerville';
@@ -125,35 +129,37 @@ abbr{
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #323233!important;
-    color: #ffffffc7;
+    background-color: var(--darkModeDarkerBackgroundColour)!important;
+    color: var(--darkModeTextColour);
   }
   #footer-wrapper{
     background-color: #3e3e40!important;
     color: #e2e2e2c7;
-    box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
   }
   #content-wrapper {
-    background-color: #4A4A4D;
-    color: #ffffffc7;
-    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.24);
+    background-color: var(--darkModeBackgroundColour)!important;
+    color: var(--darkModeTextColour);
   }
-  .sidebar .widget{background-color:#4A4A4D!important;}
-  #outer-wrapper{background-color:#4A4A4D!important;}
+  .sidebar .widget{background-color: var(--darkModeBackgroundColour)!important;}
+  #outer-wrapper{
+    background-color: var(--darkModeBackgroundColour)!important;
+    box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
+}
   h1, h2, h3 {
-    color: #ffffffc7;
+    color: var(--darkModeTextColour);
   }
+  .post-snippet{color:#e2e2e2c7;}
   a {
-    color: #5ac8fa;
+    color: var(--redColour);
   }
   button {
     background-color: #1212121a;
-    color: #ffffffc7;
+    color: var(--darkModeTextColour);
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
   }
   input, textarea {
     background-color: #1212121a!important;
-    color: #ffffffc7;
+    color: var(--darkModeTextColour);
     border: 1px solid #6f6f6f;
   }
   narrow-assistant-background-color: rgba(18, 18, 18, 0.1);
@@ -164,23 +170,23 @@ abbr{
 }
 /* Dark Mode */
 body.dark {
-  background-color: #323233!important;
-    color: #ffffffc7; 
+  background-color: var(--darkModeDarkerBackgroundColour)!important;
+    color: var(--darkModeTextColour); 
 }
 body.dark h1, body.dark h2, body.dark h3 {
-  color: #ffffffc7;
+  color: var(--darkModeTextColour);
 }
 body.dark a {
-  color: #2c407c;
+  color: var(--redColour);
 }
 body.dark button {
   background-color: #1212121a;
-    color: #ffffffc7;
+    color: var(--darkModeTextColour);
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
 }
 body.dark input, body.dark textarea {
   background-color: #1212121a;
-    color: #ffffffc7;
+    color: var(--darkModeTextColour);
     border: 1px solid #6f6f6f;
 }
 #theme-toggle{
