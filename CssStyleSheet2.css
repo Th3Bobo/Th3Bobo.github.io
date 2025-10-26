@@ -168,7 +168,7 @@ body.dark separator-color: rgb(111, 111, 111);
 body.dark assistant-sidebar-color: rgb(111, 111, 111);
 body.dark h1, body.dark h2, body.dark h3 {color: var(--darkModeTextColour);}
 /* body.dark button {background-color: #1212121a;color: var(--darkModeTextColour);box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);}*/
-#theme-toggle{
+#theme-toggle, .Uz7W2d {
     display: inline-block;
     height: 34px;
     background-color:var(--bodyLinkColour);
@@ -1379,37 +1379,27 @@ width: 22px;
 display:inline-block;
 padding: 0 0 0 0px;
 }
-#HTML4 {
-    /*Quotes*/
+#HTML4, #HTML2 {
 border-width:50px 1px 50px 1px;
 -moz-border-image: url(https://lh5.googleusercontent.com/-ejIN3xzjnmU/VIH7vzj_dxI/AAAAAAAABdk/Mz9mRDHc1go/w220-h170-no/border%2Bcopy.png) 50 1 50 1;
 -webkit-border-image: url(https://lh5.googleusercontent.com/-ejIN3xzjnmU/VIH7vzj_dxI/AAAAAAAABdk/Mz9mRDHc1go/w220-h170-no/border%2Bcopy.png) 50 1 50 1; /* Safari 3.1-5 */
 -o-border-image: url(https://lh5.googleusercontent.com/-ejIN3xzjnmU/VIH7vzj_dxI/AAAAAAAABdk/Mz9mRDHc1go/w220-h170-no/border%2Bcopy.png) 50 1 50 1; /* Opera 11-12.1 */
 border-image: url(https://lh5.googleusercontent.com/-ejIN3xzjnmU/VIH7vzj_dxI/AAAAAAAABdk/Mz9mRDHc1go/w220-h170-no/border%2Bcopy.png) 50 1 50 1 stretch;
 background: url(https://lh3.googleusercontent.com/-BgkjOjZUoZw/VIG9JhRoJlI/AAAAAAAABc0/qflnFMEWtmU/w220-h170-no/table_bg%2Bcopy.png) center repeat-y;
-    background-size: 100%;
+background-size: 100%;
 background-clip: padding-box;
 -webkit-calc(1em + 1px);
 padding: calc(1em + 1px);
 font-family: 'CaslonAntique';
-color:black;
 font-size:17px;
 }
+#HTML4 {
+/*Quotes*/
+color:black!important;
+}
 #HTML2 {
-    /*Welcome Weathertable*/
-border-width:50px 1px 50px 1px;
--moz-border-image: url(https://lh5.googleusercontent.com/-ejIN3xzjnmU/VIH7vzj_dxI/AAAAAAAABdk/Mz9mRDHc1go/w220-h170-no/border%2Bcopy.png) 50 1 50 1;
--webkit-border-image: url(https://lh5.googleusercontent.com/-ejIN3xzjnmU/VIH7vzj_dxI/AAAAAAAABdk/Mz9mRDHc1go/w220-h170-no/border%2Bcopy.png) 50 1 50 1; /* Safari 3.1-5 */
--o-border-image: url(https://lh5.googleusercontent.com/-ejIN3xzjnmU/VIH7vzj_dxI/AAAAAAAABdk/Mz9mRDHc1go/w220-h170-no/border%2Bcopy.png) 50 1 50 1; /* Opera 11-12.1 */
-border-image: url(https://lh5.googleusercontent.com/-ejIN3xzjnmU/VIH7vzj_dxI/AAAAAAAABdk/Mz9mRDHc1go/w220-h170-no/border%2Bcopy.png) 50 1 50 1 stretch;
-background: url(https://lh3.googleusercontent.com/-BgkjOjZUoZw/VIG9JhRoJlI/AAAAAAAABc0/qflnFMEWtmU/w220-h170-no/table_bg%2Bcopy.png) center repeat-y;
-    background-size: 100%;
-background-clip: padding-box;
--webkit-calc(1em + 1px);
-padding: calc(1em + 1px);
-font-family: 'CaslonAntique';
-color:var(--redTextColour);
-font-size:17px;
+/*Welcome Weathertable*/
+color:var(--redTextColour)!important;
 }
 #clear {
 margin-bottom: -1px;
