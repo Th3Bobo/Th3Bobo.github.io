@@ -154,8 +154,8 @@ body.dark #outer-wrapper{
 }
 body.dark .post-snippet{color:#e2e2e2c7!important;}
 body.dark a {color: var(--redHoverColour);}
-body.dark textarea,
-body.dark input {
+body.dark textarea, body.dark form,
+body.dark .search-input {
   background-color: #1212121a !important;
   color: var(--darkModeTextColour);
   border: 1px solid #6f6f6f;
