@@ -147,6 +147,7 @@ body.dark #content-wrapper {
   color: var(--darkModeTextColour);
 }
 body.dark .sidebar .widget{background-color: var(--darkModeBackgroundColour)!important;}
+body.dark .PopularPosts .post-title a{color: var(--darkModeTextColour)!important;}
 body.dark #outer-wrapper{
     background-color: var(--darkModeBackgroundColour)!important;
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
