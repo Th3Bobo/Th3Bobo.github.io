@@ -17,6 +17,7 @@
   --shadedBackgroundColour: #d0c4b4;
   --redColour: #8d1612;
   --blueColour: #173d7c;
+  --midColour: #C4D1D9;
   --whiteTextColour: #fff;
   --redTextColour: #9E0E06;
   --redHoverColour: #b4171e;
@@ -264,13 +265,13 @@ max-height:100%;margin:0;}
 #blog-pager{overflow:hidden;clear:both;float:left;width:100%;text-align:center;box-sizing:border-box;margin:10px 0;padding:0;font-size:15px;font-weight:500}
 #blog-pager .page-num,#blog-pager .page-active,#blog-pager .page-dots{display:inline-block;min-width:30px;height:34px;line-height:34px;margin:0 3px;text-align:center;box-sizing:border-box;border-radius:2px;transition:background-color .3s}
 #blog-pager .page-num{background-color:var(--bodyLinkColour);color:#fff;font-size:14px;font-weight:400;border:1px solid rgba(0,0,0,.1);border-bottom-width:2px;text-decoration:none;padding:0 14px}
-#blog-pager .page-num:hover,#blog-pager .page-active{background-color:var(--mainColour);color:#fff}
+#blog-pager .page-num:hover,#blog-pager .page-active{background-color:var(--redColour);color:#fff}
 #blog-pager .page-active{font-weight:600}
-#blog-pager .page-dots{background-color:#ebebeb;color:var(--titleColour);font-size:16px;font-weight:400;letter-spacing:-1px;border:0}
+#blog-pager .page-dots{background-color:var(--midColour);color:var(--titleColour);font-size:16px;font-weight:400;letter-spacing:-1px;border:0}
 #blog-pager .page-of{display:block;margin-bottom:6px;opacity:.8;float:right;padding:0 10px;width:auto;border-color:transparent}
-#blog-pager .page-prev:before,#blog-pager .page-next:before{font-family:FontAwesome;font-size:16px;font-weight:400}
+/* #blog-pager .page-prev:before,#blog-pager .page-next:before{font-family:FontAwesome;font-size:16px;font-weight:400}
 #blog-pager .page-prev:before{content:'\f104'}
-#blog-pager .page-next:before{content:'\f105'}
+#blog-pager .page-next:before{content:'\f105'} */
 #blog-pager .page-prev,#blog-pager .page-next{font-weight:bold;padding:0 15px}
 
 .queryMessage{overflow:hidden;background-color:#f2f2f2;color:var(--titleColour);font-size:13px;font-weight:400;padding:8px 10px;margin:0 0 25px}
