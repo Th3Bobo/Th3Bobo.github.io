@@ -266,14 +266,14 @@ max-height:100%;margin:0;}
 #blog-pager .page-num,#blog-pager .page-active,#blog-pager .page-dots{display:inline-block;min-width:45px;height:34px;line-height:34px;margin:0 3px;text-align:center;box-sizing:border-box;border-radius:2px;transition:background-color .3s}
 #blog-pager .page-num{background-color:var(--bodyLinkColour);color:#fff;font-size:14px;font-weight:400;border:1px solid rgba(0,0,0,.1);border-bottom-width:2px;text-decoration:none;padding:0 14px}
 #blog-pager .page-active{background-color:var(--redColour);color:#fff;border:1px solid rgba(0,0,0,.1);border-bottom-width:2px}
-#blog-pager .page-num:hover{background-color:var(--redHoverColour);color:#fff;border:1px solid #fff;border-bottom-width:2px}
+#blog-pager .page-num:hover{background-color:var(--redHoverColour);color:#fff;border:1px solid rgba(0,0,0,.1);border-bottom-width:2px}
 #blog-pager .page-active{font-weight:600}
 #blog-pager .page-dots{background-color:var(--midColour);color:var(--titleColour);font-size:16px;font-weight:400;letter-spacing:-1px;border:1px solid rgba(0,0,0,.1)}
 #blog-pager .page-of{display:block;float:right;background-color:var(--bodyLinkColour);color:#fff;font-size:14px;font-weight:400;border:1px solid rgba(0,0,0,.1);border-bottom-width:2px;text-decoration:none;padding:0 14px;min-width:45px;height:34px;line-height:34px;margin:0 3px;text-align:center;box-sizing:border-box;border-radius:2px}
-#blog-pager .page-prev,#blog-pager .page-next{font-weight:bold;padding:0 15px}
-#blog-pager .page-prev:before,#blog-pager .page-next:before{font-family:FontAwesome;font-size:16px;font-weight:400}
+#blog-pager .page-prev,#blog-pager .page-next{font-family:FontAwesome;font-size:16px;font-weight:400;padding:0 14px}
+/* #blog-pager .page-prev:before,#blog-pager .page-next:before{font-family:FontAwesome;font-size:16px;font-weight:400;vertical-align:middle}
 #blog-pager .page-prev:before{content:'\f104'}
-#blog-pager .page-next:before{content:'\f105'}
+#blog-pager .page-next:before{content:'\f105'} */
 
 .queryMessage{overflow:hidden;background-color:#f2f2f2;color:var(--titleColour);font-size:13px;font-weight:400;padding:8px 10px;margin:0 0 25px}
 .queryMessage .query-info{margin:0 5px}
