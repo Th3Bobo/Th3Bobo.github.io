@@ -288,8 +288,6 @@ max-height:100%;margin:0;}
 .queryMessage a.show-more:hover{opacity:.8}
 .queryEmpty{font-size:13px;font-weight:400;padding:10px 0;margin:0 0 25px;text-align:center}
 
-.title-wrap{position:relative;float:left;width:100%;height:32px;background-color:var(--mainColour);display:block;margin:0 0 20px}
-.title-wrap > h3{position:relative;display:block;height:32px;font-size:12px;color:#fff;font-weight:500;line-height:32px;text-align:center;text-transform:uppercase;padding:0;margin:0}
 .custom-widget li{overflow:hidden;margin:20px 0 0}
 #sidebar-wrapper .custom-widget li{padding:8px 0;border-bottom:1px solid #e5e5e5;margin:0}
 .custom-widget li:first-child{padding:0;margin:0;border:0}
@@ -455,7 +453,6 @@ to{opacity:1;transform:translate3d(0,0,0)}
 .post-body a{transition:color .17s ease}
 .post-body strike{text-decoration:line-through}
 .contact-form{overflow:hidden}
-.contact-form .widget-title{display:none}
 .contact-form .contact-form-name{width:calc(50% - 5px)}
 .contact-form .contact-form-email{width:calc(50% - 5px);float:right}
 .sidebar .widget{position:relative;overflow:hidden;background-color:var(--whiteBackgroundColour);box-sizing:border-box;padding:0;margin:0 0 35px}
@@ -502,8 +499,8 @@ ul.social-counter{margin:0 -5px}
 #sidebar-wrapper .PopularPosts .post{margin:0;padding:8px 0;border-bottom:1px solid #e5e5e5}
 .PopularPosts .post:first-child{padding:0;margin:0;border:0}
 .PopularPosts .post-image-link{position:relative;width:80px;height:70px;float:left;overflow:hidden;display:block;vertical-align:middle;margin:0 12px 0 0}
-#sidebar-wrapper .PopularPosts .post-meta{display:none}
-#sidebar-wrapper .PopularPosts .post-image-link{display:none}
+/* #sidebar-wrapper .PopularPosts .post-meta{display:none}
+#sidebar-wrapper .PopularPosts .post-image-link{display:none}*/
 .PopularPosts .post-info{overflow:hidden}
 .PopularPosts .post-title{font-size:13px;font-weight:600;line-height:1.5em;margin:0 0 3px}
 .PopularPosts .post-title a{display:block;color:#222;transition:color .17s}
@@ -1853,7 +1850,9 @@ ul.related-posts{position:relative;overflow:hidden;margin:0 -10px;padding:0}
 /* Related Posts Container */
 #related-wrap {margin:2em 0;padding:1em;background:#f9f9f9;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
 /* Title styling */
-#related-wrap .title-wrap h3 {font-size:1.5em;margin-bottom:1em;color:#333;text-align:left}
+.title-wrap{position:relative;float:left;width:100%;height:32px;background-color:var(--menuColour);display:block;margin:0 0 20px}
+.title-wrap > h3{position:relative;display:block;height:32px;font-size:12px;color:#fff;font-weight:500;line-height:32px;text-align:center;text-transform:uppercase;padding:0;margin:0}
+#related-wrap .title-wrap h3 {font-size:1.5em;margin-bottom:1em;color:#fff;text-align:left}
 /* Individual related post item */
 .related-item {background:#fff;border-radius:10px;overflow:hidden;transition:transform 0.25s ease, box-shadow 0.25s ease;display:flex;flex-direction:column}
 /* Hover effect */
