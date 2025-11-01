@@ -672,9 +672,7 @@ ul.related-posts{margin:0;}
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-  background-color: var(--redHoverColour);
-}
+.topnav a:hover {background-color:var(--redHoverColour)}
 
 /* Add an active class to highlight the current page */
 nav.topnav a.active {
@@ -683,9 +681,7 @@ nav.topnav a.active {
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
+.topnav .icon {display: none}
 .topnav {
   overflow: hidden;
   background-color: var(--menuColour);
