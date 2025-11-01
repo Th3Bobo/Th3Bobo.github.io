@@ -1858,4 +1858,6 @@ ul.related-posts{position:relative;overflow:hidden;margin:0 -10px;padding:0}
 .related-item .post-title {font-size:1em;margin:0.5em 0 0.25em;padding:0 0.5em;flex-grow:1}
 .related-item .post-title a {color:#222;text-decoration:none}
 .related-item .post-title a:hover {text-decoration:underline}
-.related-item .post-date {font-size:0.85em;color:#888;margin:0 0.5em 0.5em}
+.related-item .post-date {display: none;
+    /* font-size:0.85em;color:#888;margin:0 0.5em 0.5em */
+}
