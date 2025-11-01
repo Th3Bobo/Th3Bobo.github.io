@@ -499,8 +499,7 @@ ul.social-counter{margin:0 -5px}
 #sidebar-wrapper .PopularPosts .post{margin:0;padding:8px 0;border-bottom:1px solid #e5e5e5}
 .PopularPosts .post:first-child{padding:0;margin:0;border:0}
 .PopularPosts .post-image-link{position:relative;width:80px;height:70px;float:left;overflow:hidden;display:block;vertical-align:middle;margin:0 12px 0 0}
-/* #sidebar-wrapper .PopularPosts .post-meta{display:none}
-#sidebar-wrapper .PopularPosts .post-image-link{display:none}*/
+#sidebar-wrapper .PopularPosts .post-meta{display:none}
 .PopularPosts .post-info{overflow:hidden}
 .PopularPosts .post-title{font-size:13px;font-weight:600;line-height:1.5em;margin:0 0 3px}
 .PopularPosts .post-title a{display:block;color:#222;transition:color .17s}
