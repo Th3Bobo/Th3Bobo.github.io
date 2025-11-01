@@ -645,7 +645,7 @@ ul.related-posts{margin:0;}
 .header-logo{
     padding-top: 0px !important;
 }
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 1084px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -671,7 +671,7 @@ ul.related-posts{margin:0;}
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 26px;
+  font-size: 25px;
   font-family: 'BrothersRegular';
 }
 
