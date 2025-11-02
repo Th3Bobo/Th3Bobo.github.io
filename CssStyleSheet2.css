@@ -124,7 +124,7 @@ abbr{
     margin:0 auto;
     position:relative
 }
-#BlogSearch1 h2{
+#BlogSearch1 h2, #Followers1 h2, #BlogArchive1 h2{
     display:none
 }
 
@@ -315,7 +315,6 @@ max-height:100%;margin:0;}
 a.read-more{display:none;color:var(--redColour);font-size:13px;font-weight:500;text-transform:uppercase;margin:15px 0 0;transition:color .17s ease}
 a.read-more:after{content:'\f178';font-family:FontAwesome;font-weight:400;margin:0 0 0 5px}
 a.read-more:hover{color:var(--redHoverColour)}
-
 #breadcrumb{font-size:12px;font-weight:400;color:#aaa;margin:0 0 15px}
 #breadcrumb a{color:#aaa;transition:color .17s}
 #breadcrumb a:hover{color:var(--titleHover)}
@@ -457,8 +456,7 @@ to{opacity:1;transform:translate3d(0,0,0)}
 .contact-form .contact-form-email{width:calc(50% - 5px);float:right}
 .sidebar .widget{position:relative;overflow:hidden;background-color:var(--whiteBackgroundColour);box-sizing:border-box;padding:0;margin:0 0 35px}
 #HTML5{position:relative;overflow:visible;background-color:var(--whiteBackgroundColour);box-sizing:border-box;padding:0;}
-.sidebar .widget-title{border-radius:3px;position:relative;float:left;height:32px;background-color:var(--redColour);display:block;margin:0 0 5px}
-.sidebar .widget-title > h3{position:relative;display:inline-block;height:32px;font-size:13px;color:#fff;font-weight:600;line-height:32px;text-align:center;text-transform:uppercase;padding:0 15px;margin:0;border-radius:2px 2px 0 0}
+.sidebar .widget h3.title{position:relative;display:inline-block;height:32px;font-size:13px;color:#fff;font-weight:600;line-height:32px;text-align:center;text-transform:uppercase;padding:0 15px;margin:0 0 6px;background-color:var(--redColour);border-radius:3px}
 .sidebar .widget-content{float:left;width:100%;margin:0}
 ul.social-counter{margin:0 -5px}
 .social-counter li{float:left;width:25%;box-sizing:border-box;padding:0 5px;margin:10px 0 0}
@@ -474,7 +472,7 @@ ul.social-counter{margin:0 -5px}
 .cloud-label li{position:relative;float:left;margin:0 2px 2px 0}
 .cloud-label li a{background:var(--bodyLinkColour);display:block;color:#fff; font-family:'Marquette'; font-weight:400;padding:0 5px; border-radius: 5px; border:1px solid #eee;transition:all .17s ease; text-decoration: none;}
 .cloud-label li a:hover{color:#fff;background-color:var(--redHoverColour);border-color:#fff}
-.sidebar .FollowByEmail > .widget-title > h3{margin:0}
+.sidebar .FollowByEmail > .widget .title > h3{margin:0}
 .FollowByEmail .widget-content{position:relative;overflow:hidden;background-color:var(--whiteBackgroundColour);text-align:center;font-weight:400;box-sizing:border-box;padding:20px;border-radius:2px;border:1px solid #eee}
 .FollowByEmail .widget-content > h3{font-size:18px;color:var(--titleColour);font-weight:500;text-transform:uppercase;margin:0 0 13px}
 .FollowByEmail .before-text{font-size:13px;line-height:1.5em;margin:0 0 15px;display:block;padding:0 10px;overflow:hidden}
@@ -543,8 +541,8 @@ ul.social-counter{margin:0 -5px}
 #footer-wrapper .footer .widget{float:left;width:100%;padding:0;margin:25px 0 0}
 #footer-wrapper .footer .Text{margin:10px 0 0}
 #footer-wrapper .footer .widget:first-child{margin:0}
-.footer .widget-title{border-radius:3px;position:relative;height:32px;background-color:var(--redColour);display:block;margin:0 0 30px;display:inline-block}
-.footer .widget > .widget-title > h3{position:relative;display:inline-block;height:32px;font-size:13px;color:#fff;font-weight:600;line-height:32px;text-align:center;text-transform:uppercase;padding:0 15px;margin:0;border-radius:2px 2px 0 0}
+.footer .widget .title{border-radius:3px;position:relative;height:32px;background-color:var(--redColour);display:block;margin:0 0 30px;display:inline-block}
+.footer .widget > .widget .title > h3{position:relative;display:inline-block;height:32px;font-size:13px;color:#fff;font-weight:600;line-height:32px;text-align:center;text-transform:uppercase;padding:0 15px;margin:0;border-radius:2px 2px 0 0}
 .footer .custom-widget .post-title a:hover,.footer .PopularPosts .post-title a:hover,.footer .FeaturedPost .post-title a:hover,.footer .LinkList ul li a:hover,.footer .PageList ul li a:hover,.footer .Profile .profile-data .g-profile:hover,.footer .Profile .profile-info > .profile-link:hover{color:var(--titleHover)}
 .footer .no-posts{color:var(--footerColour)}
 .footer .post-meta{color:#aaa}
