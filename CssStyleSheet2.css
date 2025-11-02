@@ -311,7 +311,6 @@ max-height:100%;margin:0;}
 .widget iframe,.widget img{max-width:100%}
 .date-header{display:block;overflow:hidden;font-weight:400;margin:0!important;padding:0}
 .index-post .post-meta{margin:10px 0 0}
-.post-snippet{color:#444;position:relative;display:block;overflow:hidden;font-family: 'Libre Baskerville', serif;font-size:13px;line-height:1.6em;font-weight:500;margin:7px 0 0}
 a.read-more{display:none;color:var(--redColour);font-size:13px;font-weight:500;text-transform:uppercase;margin:15px 0 0;transition:color .17s ease}
 a.read-more:after{content:'\f178';font-family:FontAwesome;font-weight:400;margin:0 0 0 5px}
 a.read-more:hover{color:var(--redHoverColour)}
@@ -1864,4 +1863,13 @@ ul.related-posts{position:relative;overflow:hidden;margin:0 -10px;padding:0}
 .Uz7W2d:hover {
 border: 1px solid #f7468e;
 background: -webkit-gradient(linear,left top,left bottom,from(#64d8eb),to(#f746f6));
+}
+.post-snippet{color:#444;position:relative;display:block;overflow:hidden;font-family: 'Libre Baskerville', serif;font-size:13px;line-height:1.6em;font-weight:500;margin:7px 0 0}
+.post-snippet {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 4.5em; /* fallback for browsers not supporting clamp */
 }
