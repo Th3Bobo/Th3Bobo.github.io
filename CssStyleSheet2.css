@@ -1861,3 +1861,7 @@ ul.related-posts{position:relative;overflow:hidden;margin:0 -10px;padding:0}
 .related-item .post-date {display: none;
     /* font-size:0.85em;color:#888;margin:0 0.5em 0.5em */
 }
+.Uz7W2d:hover {
+border: 1px solid #f7468e;
+background: -webkit-gradient(linear,left top,left bottom,from(#64d8eb),to(#f746f6));
+}
