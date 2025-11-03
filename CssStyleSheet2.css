@@ -1860,7 +1860,8 @@ body.dark assistant-sidebar-color: rgb(111, 111, 111); */
 body.dark h1, body.dark h2, body.dark h3 {color: var(--darkModeTextColour);}
 /* body.dark button {background-color: #1212121a;color: var(--darkModeTextColour);box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);}*/
 body.dark #related-wrap {background:var(--darkModeDarkerBackgroundColour)}
-
+body.dark .related-item {background:var(--darkModeBackgroundColour)}
+body.dark .related-item .post-title a {color:var(--darkModeTextColour)}
 #theme-toggle, .Uz7W2d{
     display: inline-block;
     height: 34px;
@@ -1878,3 +1879,22 @@ body.dark #related-wrap {background:var(--darkModeDarkerBackgroundColour)}
     font-family: 'BrothersRegular';
 }
 #theme-toggle:hover{background-color:var(--redHoverColour);}
+/* Contain Popular Posts thumbnails inside sidebar width */
+#PopularPosts1 .item-thumbnail img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure the article doesn’t overflow the sidebar */
+#PopularPosts1 article.post {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Optional: give thumbnails consistent appearance */
+#PopularPosts1 .item-thumbnail {
+  max-width: 100%;
+  margin: 0 auto 10px;
+  text-align: center;
+}
