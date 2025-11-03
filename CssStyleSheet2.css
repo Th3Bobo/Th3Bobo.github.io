@@ -514,7 +514,7 @@ ul.social-counter{margin:0 -5px}
 .errorWrap a:hover{text-decoration:underline;}
 @media screen and (min-width: 1100px) {
 #main-wrapper{float:left;overflow:hidden;min-width:60%;max-width:76%;box-sizing:border-box;word-wrap:break-word;padding:0 15px;margin:0;}
-#sidebar-wrapper{float:right;overflow:visible;width:256px;box-sizing:border-box;word-wrap:break-word;padding:0 15px;display: grid;}
+#sidebar-wrapper{float:right;overflow:visible;width:256px;box-sizing:border-box;word-wrap:break-word;padding:0 15px;/* display: grid; */}
 #HTML5{width:115%;left:-22px;top:-14px;}}
 @media screen and (max-width: 1100px) {
 #outer-wrapper{max-width:100%;}
@@ -1879,22 +1879,3 @@ body.dark .related-item .post-title a {color:var(--darkModeTextColour)}
     font-family: 'BrothersRegular';
 }
 #theme-toggle:hover{background-color:var(--redHoverColour);}
-/* Contain Popular Posts thumbnails inside sidebar width */
-#PopularPosts1 .item-thumbnail img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Ensure the article doesn’t overflow the sidebar */
-#PopularPosts1 article.post {
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-/* Optional: give thumbnails consistent appearance */
-#PopularPosts1 .item-thumbnail {
-  max-width: 100%;
-  margin: 0 auto 10px;
-  text-align: center;
-}
