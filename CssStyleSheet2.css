@@ -1820,6 +1820,10 @@ ul.related-posts{position:relative;overflow:hidden}
   line-height: 1.5em;
   padding: 0 0.5em;
 }
+.status-msg-body a:last-of-type {
+  display: none;
+}
+
 /* Dark Mode Styles */
 body,
 body * {
