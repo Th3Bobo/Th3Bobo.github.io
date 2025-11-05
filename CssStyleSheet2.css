@@ -1731,7 +1731,8 @@ body.dark h1, body.dark h2, body.dark h3 {color: var(--darkModeTextColour);}
 body.dark #related-wrap {background:var(--darkModeDarkerBackgroundColour)}
 body.dark .related-item {background:var(--darkModeBackgroundColour)}
 body.dark .related-item .post-title a {color:var(--darkModeTextColour)}
-body.dark .header-widget h1,body.dark .header-widget p, body.dark .topnav a, body.dark .title-wrap{color:var(--yellowColour)!important}
+body.dark .header-widget h1,body.dark .header-widget p, body.dark .topnav a, body.dark .title-wrap, body.dark .sidebar .widget h3.title, body.dark #blog-pager .page-of, body.dark #blog-pager .page-num, body.dark .BlogSearch .search-action{color:var(--yellowColour)!important}
+body.dark .toggle{color:var(--redColour)!important}
 #theme-toggle, .Uz7W2d{
     display: inline-block;
     height: 34px;
