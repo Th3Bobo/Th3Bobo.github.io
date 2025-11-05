@@ -17,6 +17,10 @@
   --shadedBackgroundColour: #d0c4b4;
   --redColour: #8d1612;
   --blueColour: #173d7c;
+  --yellowColour:#E8A82B;
+  --pdfredColour:#A12026;
+  --pdfblueColour:#173D7C;
+  --pdfbeigeColour:#EDD7BD;
   --midColour: #eaf1f6;
   --whiteTextColour: #fff;
   --redTextColour: #9E0E06;
@@ -142,7 +146,7 @@ body{
     word-wrap:break-word;
     margin:0;
     padding:0;
-    transition: background-color 0.3s ease, color 0.3s ease;}
+    transition: background-color .17s ease, color .17s ease;}
 #outer-wrapper{margin:0 auto;background-color:var(--whiteBackgroundColour);box-shadow:0 0 5px rgba(0,0,0,.1)}
 .row{margin:0 auto;width:1120px}
 h3.home-title{display:none}
@@ -209,7 +213,7 @@ max-height:100%;margin:0;}
 /*-- Blog-Pager CSS --*/
 
 #blog-pager{overflow:hidden;clear:both;float:left;width:100%;text-align:center;box-sizing:border-box;margin:10px 0;padding:0;font-size:15px;font-weight:500}
-#blog-pager .page-num,#blog-pager .page-active,#blog-pager .page-dots{display:inline-block;min-width:45px;height:34px;line-height:34px;margin:0 3px;text-align:center;box-sizing:border-box;border-radius:2px;transition:background-color .3s}
+#blog-pager .page-num,#blog-pager .page-active,#blog-pager .page-dots{display:inline-block;min-width:45px;height:34px;line-height:34px;margin:0 3px;text-align:center;box-sizing:border-box;border-radius:2px;transition:background-color .17s}
 #blog-pager .page-num{background-color:var(--bodyLinkColour);color:#fff;font-size:14px;font-weight:400;border:1px solid rgba(0,0,0,.1);border-bottom-width:2px;text-decoration:none;padding:0 14px}
 #blog-pager .page-active{background-color:var(--redColour);color:#fff;border:1px solid rgba(0,0,0,.1);border-bottom-width:2px}
 #blog-pager .page-num:hover{background-color:var(--redHoverColour);color:#fff;border:1px solid rgba(0,0,0,.1);border-bottom-width:2px}
@@ -454,14 +458,14 @@ ul.social-counter{margin:0 -5px}
 .contact-form-name{float:left;width:100%;height:30px;font-family:inherit;font-size:13px;line-height:30px;box-sizing:border-box;padding:5px 10px;margin:0 0 10px;border:1px solid #ebebeb;border-radius:2px}
 .contact-form-email{float:left;width:100%;height:30px;font-family:inherit;font-size:13px;line-height:30px;box-sizing:border-box;padding:5px 10px;margin:0 0 10px;border:1px solid #ebebeb;border-radius:2px}
 .contact-form-email-message{float:left;width:100%;font-family:inherit;font-size:13px;box-sizing:border-box;padding:5px 10px;margin:0 0 10px;border:1px solid #ebebeb;border-radius:2px}
-.contact-form-button-submit{float:left;width:100%;height:30px;background-color:var(--mainColour);font-size:13px;color:#fff;line-height:30px;cursor:pointer;box-sizing:border-box;padding:0 10px;margin:0;border:0;border-radius:2px;transition:background .17s ease}
+.contact-form-button-submit{float:left;width:100%;height:30px;background-color:var(--mainColour);font-size:13px;color:#fff;line-height:30px;cursor:pointer;box-sizing:border-box;padding:0 10px;margin:0;border:0;border-radius:2px;transition:backgroundcolor .17s ease}
 .contact-form-button-submit:hover{background-color:var(--mainDarkColour)}
 .contact-form-error-message-with-border{float:left;width:100%;background-color:#fbe5e5;font-size:11px;text-align:center;line-height:11px;padding:3px 0;margin:10px 0;box-sizing:border-box;border:1px solid #fc6262}
 .contact-form-success-message-with-border{float:left;width:100%;background-color:#eaf6ff;font-size:11px;text-align:center;line-height:11px;padding:3px 0;margin:10px 0;box-sizing:border-box;border:1px solid #5ab6f9}
 .contact-form-cross{margin:0 0 0 3px}
 .contact-form-error-message,.contact-form-success-message{margin:0}
 .BlogSearch .search-input{float:left;width:75%;height:30px;background-color:#fff;font-weight:400;font-size:13px;line-height:30px;box-sizing:border-box;padding:5px 10px;border:1px solid #ebebeb;border-right-width:0;border-radius:2px 0 0 2px}
-.BlogSearch .search-action{float:right;width:25%;height:30px;font-family:inherit;font-size:13px;line-height:30px;cursor:pointer;box-sizing:border-box;background-color:var(--redColour);color:#fff;padding:0 5px;border:0;border-radius:0 2px 2px 0;transition:background .17s ease}
+.BlogSearch .search-action{float:right;width:25%;height:30px;font-family:inherit;font-size:13px;line-height:30px;cursor:pointer;box-sizing:border-box;background-color:var(--redColour);color:#fff;padding:0 5px;border:0;border-radius:0 2px 2px 0;transition:backgroundcolor .17s ease}
 .BlogSearch .search-action:hover{background-color:var(--redHoverColour)}
 .Profile .profile-img{float:left;width:80px;height:80px;margin:0 15px 0 0;transition:all .17s ease}
 .Profile .profile-datablock{margin:0}
@@ -702,8 +706,8 @@ blockquote:after{
     display:block;
     text-decoration:none;
     font-weight:400;
-    transition:all .3s ease-out !important;
-    -webkit-transition:all .3s ease-out !important;
+    transition:all .17s ease-out !important;
+    -webkit-transition:all .17s ease-out !important;
 }
 a.button{
     color:#fff;
@@ -866,11 +870,11 @@ pre .cl{
     -o-border-radius:2px;
     border-radius:2px;
     text-transform:uppercase;
-    -webkit-transition:all .2s ease-out;
-    -moz-transition:all .2s ease-out;
-    -o-transition:all .2s ease-out;
-    -ms-transition:all .2s ease-out;
-    transition:all .2s ease-out;
+    -webkit-transition:all .17s ease-out;
+    -moz-transition:all .17s ease-out;
+    -o-transition:all .17s ease-out;
+    -ms-transition:all .17s ease-out;
+    transition:all .17s ease-out;
     color:#FFF;
 }
 #contact .contact-form-button-submit:hover{
@@ -1314,7 +1318,7 @@ padding: calc(1em + 1px);
 font-family: 'CaslonAntique';
 font-size:17px;
 }
-#HTML4 {
+#HTML4, #HTML4 h3{
 /*Quotes*/
 color:black!important;
 }
@@ -1787,7 +1791,7 @@ ul.related-posts{position:relative;overflow:hidden}
 .title-wrap{position:relative;float:left;width:100%;background-color:var(--menuColour);display:block;margin:0 0 5px;padding:2px 10px;height:32px;}
 .title-wrap h3{position:relative;display:block;font-size:1.5em;color:#fff;font-weight:500;text-align:left;text-transform:uppercase;padding-bottom:2px;line-height:32px;height:32px;margin-top:2px}
 /* Individual related post item */
-.related-item {background:#fff;border-radius:10px;overflow:hidden;transition:transform 0.25s ease, box-shadow 0.25s ease;display:flex;flex-direction:column}
+.related-item {background:#fff;border-radius:10px;overflow:hidden;transition:transform .17s ease, box-shadow 0.25s ease;display:flex;flex-direction:column}
 /* Hover effect */
 .related-item:hover {transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,0.12)}
 /* Post image */
@@ -1828,10 +1832,10 @@ ul.related-posts{position:relative;overflow:hidden}
 body,
 body * {
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    background-color .17s ease,
+    color .17s ease,
+    border-color .17s ease,
+    box-shadow .17s ease;
 }
 body.dark {
   background-color: var(--darkModeDarkerBackgroundColour) !important;
@@ -1850,7 +1854,7 @@ body.dark #outer-wrapper{
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
 }
 body.dark .post-snippet{color:#e2e2e2c7!important;}
-body.dark a, body.dark #sub-footer-wrapper .copyright-area a, body.dark .common-widget .LinkList ul li a, body.dark .common-widget .PageList ul li a {color: var(--redHoverColour);}
+body.dark a, body.dark #sub-footer-wrapper .copyright-area a, body.dark .common-widget .LinkList ul li a, body.dark .common-widget .PageList ul li a {color:var(--yellowColour);border-color:var(--yellowColour)}
 body.dark textarea, body.dark form, body.dark .search-input {
   background-color: #1212121a !important;
   color: var(--darkModeTextColour);
@@ -1866,6 +1870,7 @@ body.dark h1, body.dark h2, body.dark h3 {color: var(--darkModeTextColour);}
 body.dark #related-wrap {background:var(--darkModeDarkerBackgroundColour)}
 body.dark .related-item {background:var(--darkModeBackgroundColour)}
 body.dark .related-item .post-title a {color:var(--darkModeTextColour)}
+body.dark .header-widget, body.dark .topnav a{color:var(--yellowColour)}
 #theme-toggle, .Uz7W2d{
     display: inline-block;
     height: 34px;
