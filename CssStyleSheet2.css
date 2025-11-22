@@ -1689,6 +1689,17 @@ ul.related-posts{position:relative;overflow:hidden}
 .status-msg-body a:last-of-type {
   display: none;
 }
+/* Second Level Bullets*/
+.post-body ul ul{
+  margin-left:15px!important;
+}
+.post-body ul ul li{
+  margin-left:15px!important;
+}
+.post-body ul ul li:before{
+    content: "◦";
+    margin-right: 5px;
+}
 
 /* Dark Mode Styles */
 body,
