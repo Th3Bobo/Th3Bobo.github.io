@@ -1700,7 +1700,26 @@ ul.related-posts{position:relative;overflow:hidden}
     content: "◦";
     margin-right: 5px;
 }
-
+.book-whishlist-table td{
+    padding:25px;
+}
+.book-whishlist-table td,
+.book-whishlist-table th {
+  vertical-align: top;
+}
+.book-whishlist-table img {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+ .book-whishlist-table .toc-header-col1,
+ .book-whishlist-table .toc-entry-col1 {
+   width: 120px;
+   max-width: 120px;
+   overflow: hidden;
+   padding: 10px
+ }
 /* Dark Mode Styles */
 body,
 body * {
