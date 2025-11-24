@@ -1715,8 +1715,8 @@ ul.related-posts{position:relative;overflow:hidden}
 }
  .book-whishlist-table .toc-header-col1,
  .book-whishlist-table .toc-entry-col1 {
-   width: 120px;
-   max-width: 120px;
+   width: 10%;
+   max-width: 10%;
    overflow: hidden;
    padding: 10px
  }
