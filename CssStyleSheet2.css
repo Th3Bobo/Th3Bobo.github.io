@@ -1701,7 +1701,7 @@ ul.related-posts{position:relative;overflow:hidden}
     margin-right: 5px;
 }
 .book-whishlist-table td{
-    padding:25px;
+    padding:10px;
 }
 .book-whishlist-table td,
 .book-whishlist-table th {
@@ -1720,6 +1720,15 @@ ul.related-posts{position:relative;overflow:hidden}
    overflow: hidden;
    padding: 10px
  }
+ .toc-header-col4, .toc-header-col5{
+  width:10%;
+  max-width: 10%;
+  background: var(--blueColour);
+  color: white;
+  padding-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 /* Dark Mode Styles */
 body,
 body * {
