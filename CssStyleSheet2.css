@@ -1790,3 +1790,11 @@ body.dark .toggle{color:var(--redColour)!important}
     font-family: 'BrothersRegular';
 }
 #theme-toggle:hover{background-color:var(--redHoverColour);}
+details > summary {
+  cursor: pointer;
+  list-style: none; /* removes default triangle in Firefox */
+}
+
+details > summary::-webkit-details-marker {
+  display: none; /* removes default triangle in Chrome/Safari */
+}
