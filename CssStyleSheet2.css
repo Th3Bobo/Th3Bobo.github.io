@@ -1800,6 +1800,19 @@ details > summary::-webkit-details-marker {
 }
 summary {
 font-family: 'CaslonAntique';
-font-size: 10px;
+font-size: 15px;
 color: var(--redColour);
+}
+details[open] > summary {
+  font-weight: bold;
+  color: var(--redTextColour); 
+}
+#sourcesContent{
+font-family: "Helvetica Neue";
+font-size: 12px;
+position:absolute;
+right:0;
+width:170px;
+max-height:200px;
+overflow-y:auto;
 }
