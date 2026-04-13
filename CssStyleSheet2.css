@@ -1798,3 +1798,8 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none; /* removes default triangle in Chrome/Safari */
 }
+summary {
+font-family: 'CaslonAntique';
+font-size: 10px;
+color: var(--redColour);
+}
