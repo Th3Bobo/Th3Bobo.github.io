@@ -1080,7 +1080,6 @@ border: 1px solid #3e3a36;
 margin: 30px 0;
 font-size: 30px;
 font-weight: bold;
-padding: 30px 0 20px;
 text-align: center;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -1096,6 +1095,9 @@ font-weight: bold;
 padding: 10px 0 20px;
 border-spacing: 10px;
 text-align: center;
+}
+#generator{
+padding: 30px 0 20px;
 }
 #generator input{
 font-size: 20px;
