@@ -1810,9 +1810,9 @@ details[open] > summary {
 #sourcesContent{
 font-family: "Helvetica Neue";
 font-size: 12px;
-position:absolute;
+/* position:absolute;
 right:0;
 width:170px;
 max-height:200px;
-overflow-y:auto;
+overflow-y:auto; */
 }
