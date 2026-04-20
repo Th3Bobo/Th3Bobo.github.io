@@ -1278,6 +1278,7 @@ width: 50px;}
     display: inline-block;
     width: 115px;
     height: 20px;
+    padding-bottom: 20px;
     text-align: center;
     vertical-align: top;
     font-family: 'BrothersRegular';
@@ -1345,7 +1346,7 @@ width: 50px;}
    padding-top: 10px;
 }
 #checkboxline {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 #checkboxline label {
    font-family: 'BrothersRegular';
