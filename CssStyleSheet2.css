@@ -1802,7 +1802,7 @@ summary {
 font-family: 'CaslonAntique';
 font-size: 15px;
 color: var(--redColour);
-padding: 7px;
+padding: 7px 7px 0;
 }
 details[open] > summary {
   font-weight: bold;
