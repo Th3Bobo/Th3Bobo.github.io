@@ -1274,7 +1274,7 @@ font-family:CalsonAntique;
 text-align: right;
 width: 50px;}
 /* .gsc-search-button */
-#radioline label:not(#rbx) {
+#genderline label:not(#rbx), #radioline label:not(#rbx) {
     display: inline-block;
     width: 115px;
     height: 20px;
