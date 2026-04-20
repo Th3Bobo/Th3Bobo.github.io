@@ -1285,6 +1285,17 @@ width: 50px;}
 	font-weight: Bold;
 	font-size:2;
 }
+#genderline{
+    display: inline-block;
+    width: 115px;
+    height: 20px;
+    text-align: center;
+    vertical-align: top;
+    padding-bottom: 80px;
+    font-family: 'BrothersRegular';
+	font-weight: Bold;
+	font-size:2;
+}
 #titlel {
     display: inline-block;
     width: 50px;
@@ -1328,14 +1339,6 @@ width: 50px;}
     font-family: 'BrothersRegular';
     font-weight: Bold;
 
-}
-#sourcel {
-    display: inline-block;
-    width: 80px;
-    height: 20px;
-    text-align: center;
-    vertical-align: top;
-   padding-top: 10px;
 }
 #metroL {
     display: inline-block;
