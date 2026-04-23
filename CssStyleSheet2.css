@@ -1780,6 +1780,8 @@ body.dark .generator {background:var(--darkModeDarkerBackgroundColour)}
 body.dark #originTable {background:var(--darkModeDarkerBackgroundColour)}
 body.dark pre .line-number span:nth-child(odd){background-color:rgba(255, 255, 255, 0.11)}
 body.dark pre .line-number span:nth-child(even){background-color:rgba(0, 0, 0, 0.05)}
+body.dark .pbtn, #generatorbtn{color:var(--yellowColour)}
+body.dark #Hrasbildgoeshere{color:var(--yellowColour)} 
 #theme-toggle, .Uz7W2d{
     display: inline-block;
     height: 34px;
