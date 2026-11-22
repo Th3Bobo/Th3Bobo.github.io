@@ -1,0 +1,1172 @@
+<meta charset="utf-8">
+<link charset="utf-8" href="https://th3bobo.github.io/CssStyleSheet2.css" rel="stylesheet" type="text/css"></link>
+<!--Name Generators//-->
+<link rel="preload" href="https://th3bobo.github.io/40kSprite.svg" as="fetch" crossorigin></link>
+<script type="text/javascript">
+let spriteLoaded = false;
+async function ensureSprite() {
+  if (spriteLoaded) return;
+  const text = await fetch('https://th3bobo.github.io/40kSprite.svg').then(r => r.text());
+  const div = document.createElement('div');
+  div.style.display = 'none';
+  div.innerHTML = text;
+  document.body.prepend(div);
+  spriteLoaded = true;
+}
+function pick(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function gengen(fullname){
+	if(document.getElementById("result")){document.getElementById("placeholder").removeChild(document.getElementById("result"));}
+	var regiment = document.getElementById("regimentCB").checked;
+		if (regiment) {addRow("",fullname,"");}
+		else { var element = document.createElement("div");
+			element.setAttribute("id", "result");
+			element.appendChild(document.createTextNode(fullname));
+			document.getElementById("placeholder").appendChild(element);}
+}
+
+function capname(str){
+strlen = str.length;
+initial = str.charAt(0);
+restofname = str.substring(1,strlen);
+cappedname = initial.toUpperCase()+restofname;
+return cappedname;
+}
+function getnum(i) {
+    //Pick random number from a passed range of numbers.
+    let result = Math.round(Math.random() * i);
+    if (result === 0) {
+        result = 1;
+    }
+    return result;
+}
+function fellgorgen() {
+    const Part1 = ["Brash", "Cry", "Tra", "Best", "Gran", "War", "Bris", "Cra", "Mash", "Slash", "Craz", "San", "Ul", "Mi", "Spra", "Spra", "Wal", "Far", "Fra", "Ma", "Gra", "Pi", "Pa", "Py", "My", "Mu", "Ra", "Ri", "Ro", "Ta", "La", "Ty", "To", "Ly", "Kras", "Mras", "Thish", "Tro", "Gish", "Wir", "Shi", "Spi", "Scruf", "Yel", "Thor", "Prick", "Friz", "Tend", "Point", "Gnar", "Lon", "Slouk", "Wir", "Shag", "Ey", "Mo", "Khor", "Mala"];
+    const Part2 = ["-fagor", "-fagors", "-gor", "-gors", "-mulgor", "-mulgors", "-nogor", "-nogors", "-tigor", "-tigors", "'fagor", "'fagors", "'gor", "'gors", "'mulgor", "'mulgors", "'nogor", "'nogors", "'tigor", "'tigors", "er Fur", "er Goat'forit", "ey Pelt", "ey Tail", "fagor", "fagors", "fy Claw", "g Paw", "gor", "gor", "gor", "gor", "gors", "gy Antler", "loch", "low Tail", "ly Mantle", "ly Muzzle", "ly Tusk", "mulgor", "mulgors", "ner Snout", "nogor", "nogors", "ny Beard", "ny Hair", "tigor", "tigors", "y Mane", "zy Hide"];
+    const Part3 = ["Karzog","Gorthor","Grakkle","Ul-Ruk","Kloven","Khazrak","Graktar","Gallak","Skarr","Ghorroz","Khorok","Magok","Malagor","Skull-Gave","Ghorros","Morghur","Moonclaw","Ungrol","Slugtoungue","Kartok","Gorsqualor","Khorgor","Sharrgu","Darkoth","Borzhar","Rarkos","Moloch","Blackleg","Stronghoof","Puk","Low-Block","Ramstein","Whacker","Masher","Darkhide","Skullface","Razorhorn","Dumbgluck","Skrunk","Eygor","Withergrasp","Slarga","Ghorak","Kraggahagh","Vosgar","Darvik","Azgathor","Surlok","Azavak","Odogor","Horgaros","Jakka","Grashrak","Murghoth","Korsh","Draknar","Ushkor","Gnarl","Surlok","Gluhak","Gnakh","Gnargrok","Gertrude","Swilefog","Guzgog","Ruttrot","Gizilgig","Agbone","Skarrim","Bolbone","Kollbag","Khornag","Hardhoof","Shearmone","Bendle","Rurkhar","Khogdhak","Dozrak","Girthaac","Thukthur","Naokriz","Tiktak","Sharppaw","Heavybraid","Broadjaw","Darkchest","Knuzrox","Digdheg","Terkooz","Ganaz","Korkic","Bucruz","Proudspine","Solidhands","Swiftscar","Moonclaw","Togthuc","Zoghaz","Turkuc","Mazkux","Kaozkik","Vakrog","Deathmaw","Frozeneye","Sharpbelly","Lonecoat","Kralmaw","Aabrqu","Aafwub","Akh","Akhash","Akhbarr","Akh'rak","Aksho","Armeu","Baamu","Bhorgor","Bray B'iter","Dha","Dhaatau","Dhar","Dharzuis","Epbzuaab","Etzhqu","Faudart","Fbardhgu","Gallak","Ghore","Ghorros","Ghorroz","Gruk","Guuaa","Haadh","Kha'Rak","Khargar","Khazsnorr","Khonrok","Khorok","Khoros","Khorr-nash","Kloven","L'aqshy","Maadhguib","Magok","Narn","Pdhefuu","Phuh","Phuudhuif","Puib","Ragush","Rarm","Rosgor","Rusuizu","Shardui","Siidhqu","Skarr","Slaa","Srui","Suigu","Suizhguw","Szush","Ul-Ruk","Ungrol","Warars","Werd","Wunsru"];
+    const Part4 = ["Beast-Eye","Black-Horn","Blackheart","Blood-Gorge","Blood-Horn","Burrow-Gorger","Child of the Gravid Orb","Crowfather","Despoiler of the Sacred","Doubledown","Doubledrool","Fangmaw","Fellhoof","Foulstrike","Four-horn","Gorelust","Gorepelt","Great-horn","Half-horn","Harbringer of Disaster","Hardhoof","Hornsthief","Lord of the Black Harvest","Manripper","Mantearer","Marrowsucker","Master of Skulls","One-horn","Packmaster","Sire of a Thousand Young","Slugtongue","Son of Morrslieb","Spittledrool","Stormgorged","Tanglehorn","the Barren one","the Beastlord","the Dark Omen","the Famine-fiend","the Flesh-Hungry","The Lunatic Prince","the One-eyed","the Redhorn","The Sadowgave","the Sneak","the Spurned one","the Stone-Horn","the Trampler","the Warped","Thickskull","Warhoof","Whiteface","Wildkin","Wrathfang","Goat'forit","Beast-Eye","Blackheart","Blightheart","Bloodbreath","Blood-Bringer","Bloodclaw","Blood-Drinker","Blood-forge","Bloodgorge","Blood-Gorge","Bloodthirst","Darkheart","Death-Herd","Death-Maker","Doom-Bringer","Earth-Shaker","End-Bringer","Feast-Bringer","Flesh-Eater","Fury-Eye","Goreclaw","Gore-Dweller","Gore-Seeker","Goretusk","Grave-Shaker","Gound-Shaker","Heart-Eater","Heart-Render","Horn-Breaker","Land-Reaper","Limb-Render","Manbane","Man-Eater","Man-Seeker","Rageheart","Rat-Eater","Ruinclaw","Soul-Crusher","Soulrend","Stoneheart","Stone-Horn","the Black-Horn","the Bloodthirsty","the Flesh-Ripper","the Fury","the Halfmind","the Heart-Eater","the Heart-Ripper","the Heart-Stopper","the Man-Seeker","the Red","the War-Maker","the World-Eater","World-Eater"];
+    const randomNumber0 = parseInt(Math.random() * 25);
+    const titleValue = document.getElementById("title").checked;
+    let name, fullname;
+        if (randomNumber0 == 0) {
+            name = pick(Part3);
+        }
+        if (randomNumber0 > 0) {
+            name = pick(Part1) + pick(Part2);
+        }
+        if (titleValue) {
+            fullname = name + " " + pick(Part4);
+        }
+        if (!titleValue) {
+            fullname = name;
+        }
+    gengen(fullname);
+}
+
+function daemonGen() {
+    if (document.getElementById("use").checked) {
+        usename();
+    } else if (document.getElementById("trueN").checked) {
+        truename();
+    }
+}
+function truename() {
+    if (document.getElementById("greater").checked) {
+        daemonnamelen = 4;
+    }
+    if (document.getElementById("other").checked) {
+        daemonnamelen = 2;
+    }
+    const usenames = "A COG FL LL SS CC ER KW PP Z AA DA FOL MM SH ABL DE G'G N'N TH AE DH GZ O THL AK DH HH OA TL AN DU HL OE U AO E I OO UL AR EE II OW UU BH EO IL RH Y IO EU IR PH YY CH FF KS Q' ZH";
+    const usenamesarray = usenames.split(" ");
+    godno = document.getElementById("god").value;
+    diceno = document.getElementById("d6").value;
+    if (daemonnamelen === 4) {
+        finalno = getnum(diceno) * godno;
+    } else {
+        finalno = godno;
+    }
+    let truenamestr1 = "";
+    for (x = 1; x < finalno; x += 1) {
+        truenamestr1 = truenamestr1 + usenamesarray[getnum(60) - 1];
+    }
+    truenamestr = capname(truenamestr1.toLowerCase());
+    gengen(truenamestr);
+}
+function usename() {
+    let daemonnamelen = "Unknown";
+    if (document.getElementById("greater").checked) {
+        daemonnamelen = 4;
+    }
+    if (document.getElementById("other").checked) {
+        daemonnamelen = 2;
+    }
+    const usenames = "blue dangle dreg worship grind grunt mad pox quiver slash suck thigh bane adore fiddle hot mucus sate vex bubo chew dog gibber gnaw cry maul offal pus spasm spittle sword wrack cackle fang hammer mildrew rot toad bile blister canker eat fester flux glut hate ichor leper mire rend shout skull spike tremble vomit wind brute dung glop gut mark red spider thrash bag blade cold death face fist grab gristle helm loon pest puke rip sharp mewl sweat vile whip blunt drink gall gross maggot rabid sore taint worm belch bog shine crush fire froth gobble grim liver maim moulder pinch scratch slobber spew stare wart screech blood doom foul grin loose putrid slob sting wither axe black break dread eye thrust fury grue heart loath mange quake rheum scum lash tear twist water blast cut foam green blade plague slake squeeze whine ash beast chaos crab drool fiend gnash grasp hack lick nibble pierce reap scab spite slice claw war beetle craze flesh gore lip pile sin spot warp bend blight bowel clap fat flush fume gob howl maul man ooze rotten sinew slug spoor venom wight bite claw filth glutton kill pain scrape spine wail burble";
+    const usenamesarray = usenames.split(" ");
+    const nameindex1 = getnum(200) - 1;
+    const nameindex2 = getnum(200) - 1;
+    const nameindex3 = getnum(200) - 1;
+    const nameindex4 = getnum(200) - 1;
+    const finalfirstname = capname(usenamesarray[nameindex1]) + usenamesarray[nameindex2];
+    const finalsecondname = capname(usenamesarray[nameindex3]) + usenamesarray[nameindex4];
+    if (daemonnamelen === 4) {
+        gengen(finalfirstname + " " + finalsecondname);
+    } else {
+        gengen(finalfirstname);
+    }
+}
+function orkgen(){
+ const Part1 = ["Urzog","Snikrat","Krogskull","Grogrok","Droknog","Grodd","Zogwarp","Gitzog","Ruggat","Zargruk","Stugbrog","Snarkrat","Zagblag","Bokgrobber","Zarknutz","Dhakadak","Nargrunt","Farksnot","Gharagh","Urlakk","Zogger","Slazbag","Squigface","Ugul","Tuska","Nakboz","Skarzot","Kroggler","Grukk","Fragbad","Traknug","Grizgutz","Shrokbog","Kraznag","Gragnatz","Blokrotz"];
+ const Part2 = ["Drakka","Grug","Gitstompa","Skullcrusha","Facekrumpa","the 'Ard","Grot Kicker","da Shiv","(no uvver bit)","Blaktoof","da Hammer","Ghazbhag","Steelfang","Daggafist","Squigbiter","da Stompy","da Facegrinda","Loudgob","Facebiter","da Maniak","Steelbootz","Ripblade","'Umiechewa","Ironboot","Flame Spitta","Wurldkilla","Stompkrumpa","Spleenrippa","Bigfangz","Badfang","Snotkicka","Brewguzzla","Bonesplitta","'Eadkrakka","Madeye","Trakeye"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function titangen(){
+ const Part1 = ["Sir","Lady","Sire","Mam\'sel","Duke","Duchess"];
+ const Part2 = ["Disgrace","Vengeance","Atonement","Last Living Heir","Vendetta","Lost Crusader"];
+ const Part3 = ["The Crimson","The Shadowed","The Vengeful","The Gilded","The Blazing","The Adamant"];
+ const Part4 = ["Reaper","Slayer","Hunter","Strider","Wolf","Defender"];
+ const Part5 = ["Crimson","Unyielding","Emperor’s","Blade of","Manifest","Oath of"];
+ const Part6 = ["Fury","Vengeance","Wrath","Might","Redemption","Conquest"];
+ const Part7 = ["Silas","Eilas","Lauraine","Mercutias","Orpheo","Gallahen","Elleanor","Kirenna","Launcelin","Midhas","Paoul","Dassus","Bianca","Zarcharin","Emilia","Katarin","Lukas","Omnis","Lucella","Tarquane","Dakashi","Sevlana","Daiodan","Adanbe","Gideox","Castor","Gwendolane","Asmus","Terrence","Percivin","Loretta","Shin-Chei","Olwyn","Dorean","Alexis","Manesha"];
+ const Part8 = ["Magellon","Olleander","Kais","Silaine","Maximus","Arnwyl","Mortol","Voss","O’dort","Jans-Vandaire","Hastermere","Trael","Torgovin","Vondrane","Kassyn","Rasmador","Terryn","Cadmus","Griffith","Hawkshroud","Mortan","Raven","Vulker","Taranis","Krast","Maledin","Jor","Haspertine","Laing","Tyros","Rexis","Usperii","Tragg","Krail","Drake","Silentis"];
+ const randomNumber9 = parseInt(Math.random() * 2);
+ const ett = "Reason for taking the Freeblade oath: " + pick(Part2);	
+ if(randomNumber9 == 0){
+ 		var tva = "Freeblade: " + pick(Part3) + " " + pick(Part4);
+ 		}
+ 	if(randomNumber9 == 1){ 
+ 	 	var tva = "Freeblade: " + pick(Part5) + " " + pick(Part6);
+}
+ 		addRow("", ett, "");
+ 		addRow("", tva, "");
+ 		gengen("Noble: " + pick(Part1) + " " + pick(Part7) + " " + pick(Part8));
+}
+function renegadetitangen(){
+ const Part1 = ["Sir","Lady","Prince","Queen","Executioner","Huntmaster"];
+ const Part2 = ["Insanity","Possession","Scrap-code Corruption","Outcast","Oath-Breaker","Betrayed"];
+ const Part3 = ["Misery","Cruelty","Oppressor","Annihilation","Heresy","Tyrant"];
+ const Part4 = ["Absolutis","Unrepentant","Obscenitus","Abominant","Unstoppable","Unleashed"];
+ const Part5 = ["Sword of","Hound of","Oath of","Bringer of","Lord of","Engine of"];
+ const Part6 = ["Annihilation","Hate","Souls","Misery","Unholy Bliss","Obliteration"];
+ const Part7 = ["Adraxis","Karrigan","Drex","Karinna","Baphmael","Lucius","Hashmael","Beladonna","Lupus","Irax","Solomon","Threnn","Malefice","Taurix","Xanus","Mordren","Ravanax","Khator","Morwenna","Kallis","Shenach","Aleena","Lita","Markus","Lukin","Wulf","Thydus","Kybus","Daeon","Sylas","Nemata","Shoto","Ankawe","Bynora","Gerrais","Perseun"];
+ const Part8 = ["Pentakhost","Dire","Asmodor","Vanmort","Skerryn","Devine","Crucian","Hexx","Arktor","Vanjakyl","Gyrax","Diamedes","Karjanus","Kharnassus","Mandragor","Xhul","Terryn","Cadmus","Griffith","Hawkshroud","Mortan","Raven","Vulker","Taranis","Krast","Hellebor","Mortifax","Noctis","Thresh","Tormenstra","Gethsemanus","Tyrantus","Skorn","Archangeline","Diabolane","Riktus"];
+ const randomNumber9 = parseInt(Math.random() * 2);
+ const ett = "Reason for turning traitor: " + pick(Part2);
+ 			
+ if(randomNumber9 == 0){
+ 		var tva = "Renegade: " + pick(Part3) + " " + pick(Part4);
+ 		}
+ 	if(randomNumber9 == 1){ 
+ 	 	var tva = "Renegade: " + pick(Part5) + " " + pick(Part6);
+}
+ 		addRow("", ett, "");
+ 		addRow("", tva, "");
+ 		gengen("Noble: " + pick(Part1) + " " + pick(Part7) + " " + pick(Part8));
+}
+function necrongen(){
+ const Part1 = ["Ankhep", "Tamonhak", "Eknotath", "Khotek", "Thanatar", "Amhut", "Karok", "Zan-Tep", "Unakh", "Khophec", "Tzantath", "Tahar", "Imonekh", "Trazat", "Xeoptar", "Hamanet", "Oberek", "Banatur", "Ahmnok", "Kophesh", "Teznet", "Odakhar", "Kythok", "Eknothet", "Anubitar", "Anokh", "Thotep", "Anhutek", "Ikhatar", "Thotmek", "Ramatek", "Homanat", "Taknophet", "Makhret", "Zanatek", ""];
+ const Part2 = ["the Unliving", "the Gilded", "the Great", "the Exalted", "the Loyal", "the Cruel", "the Storm\u2019s Eye", "the Bloodied", "the Mighty", "the Relentless", "the Unforgiving", "the Merciless", "the Glorious", "the Devoted", "the Victorious", "the Destroyer", "the Shrouded", "the Flenser", "the Unstoppable", "the Beheader", "the Impaler", "the Magnificent", "the Illuminated", "the Executioner", "the Phaeron\u2019s Hand", "the Guardian", "the Gatekeeper", "the All-seeing", "the All-knowing", "the Starwalker", "the Starkiller", "the Lifetaker", "the Godbreaker", "the Torchbearer", "the Stormbringer", "the Colossus"];
+ const randomNumber1 = parseInt(Math.random() * Part1.length);
+ const zup = Part1.length -1;
+ const titleValue = document.getElementById("title").checked;
+ let fullname;
+ if (document.getElementById("title").checked === true) {
+        fullname = pick(Part1) + " " + pick(Part2);
+    } else {
+    	if(randomNumber1 !== zup){
+        	fullname = pick(Part1);}
+        else {fullname = pick(Part2);}
+    }
+ gengen(fullname);
+}
+function harlequingen(){
+ const Part1 = ["The Sun", "The Star", "The Shadow", "The Void", "The Sky", "The Redtide", "The Moon", "The Highborn", "The Leering", "The Bladed"];
+ const Part2 = ["King", "Queen", "Prince", "Knave", "Witch", "Judge", "Executioner", "Seer", "Ghoul", "Crone"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function drukharigen(){
+ const Part1 = ["Ariex", "Melikka", "Grendett", "Vaivel", "Bithandrel", "Ingenue", "Demadyne", "Laelanyel", "Excrucia", "Nathra", "Vrexith", "Thyndrella", "Selithrian", "Xela", "Peiythia", "Uless", "Skyshrin", "Anielyn", "Vyrenik", "Khatryx", "Nyssa", "Phyrix", "Mellyx", "Kherissa", "Tryxin", "Aniellah", "Veshtari", "Morghynn", "Thrixxesh", "Thessa", "Xindrell", "Kladys", "Shemriel", "Lyxanna", "Nimhre", "Vylekh"];
+ const Part2 = ["La\u2019flenz", "Wysp", "Soriel", "Oblique", "Nervose", "Mourn", "Vivicon", "Viserhyx", "Berrebaal", "Vulptuse", "Ehlynna", "Khaur", "Hexehss", "the Crimson", "Thrix", "Khoryssa", "Vexx", "of the Screaming Blade", "Khrygg", "Nichtren", "Veluxis", "the Huntress", "Beastbane", "the Magnificent", "Trehll", "Xyriphraxis", "Masdruvael", "Khrone", "the Untouched", "Bloodslyk", "the Cruel", "Kharavyxis", "Ynthrekh", "Dyvahur", "Krael", "the Bloodsister"];
+ const Part3 = ["Anarkyss", "Veth\u2019va", "Mayator", "Quaez", "Daisan", "Bekliel", "Orvak", "Narlek", "Monsatos", "Vivithrax", "Drevakh", "Kyzarkh", "Thresyn", "Shylas", "Lythric", "Kylos", "Theskril", "Skythe", "Akkhar", "Kharsac", "Nyktos", "Grevyth", "Thraed", "Sykil", "Khaeyl", "Madrax", "Akhirion", "Vypus", "Ethriliac", "Kheraes", "Iyshak", "Khepres", "Eldoriac", "Vrekkus", "Thayd", "Xurul"];
+ const Part4 = ["Sar\u2019sel", "Vorpex", "Kreen", "the Bloodbreather", "Maestros", "Gaarsus", "Ehthrek", "Ghorghast", "Ignyss", "Mohrkhar", "Thresk", "Scaur", "the Pale", "Khadylus", "Phrel", "Vulkyriax", "Nul", "the Flenser", "Poisonblade", "Barbtongue", "Xesh", "the Ravening", "Draeven", "of the Obsidian Needle", "Vhrex", "Kaghmyr", "Thrail", "Flickerblade", "Xosh", "the Bleak", "Neverbreath", "Skahyl", "Verkosian", "Ulthurian", "Menesh", "the Cruel"];
+ const Male = document.getElementById("Male").checked;
+ let fullname = pick(Part1) + " " + pick(Part2);
+ if(Male) {
+                    fullname = pick(Part3) + " " + pick(Part4); 
+           }
+ gengen(fullname);
+}
+function asuryanigen(){
+ const Part1 = ["Tenrith", "Justune", "Aleerith", "Yrlla", "Aileer", "Caslith", "Tai\u2019shar", "Jair", "Luirth", "Aleera", "Phyllistra", "Myrnoth", "Fyrram", "Ishylla", "Tishriel", "Aydona", "Gala\u0301nta", "Ylleth", "Giladrea", "Osinell", "Glenoighi", "Ishta\u0301", "Yvraine", "Intrisiel", "Torc", "Anesh", "Kalistri", "Alee", "Altanish", "Gwyth", "Tyrelli", "Kaithe", "Galrethi", "Noithi", "Braesil", "Meari"];
+ const Part2 = ["the Fireheart", "Kyldroth", "Tridehla\u0301", "Who Walks Alone", "of the Flowing Spirits", "Iydoth", "Brylliel", "Biel-rith", "(no second appellation)", "Iyadolath", "Last of the House of the Ayandi", "the Melancholy", "Llacharni (\u2018brightheart\u2019)", "the Huntress", "Aryimelli", "Bringer of Azure Death", "Umachuli", "Shelwe-hann (\u2018Song of Enlightenment\u2019)", "Serenti (\u2018glory of the setting sun\u2019)", "Ullamar", "Dystari (\u2018that which will never shatter\u2019)", "Ciaradh", "Iyadari", "Fletha\u0301l (\u2018Star-pattern of Perfection\u2019)", "the Whisper of Death", "Hanndroth (\u2018Quest Eternal\u2019)", "Sheersom", "Cegodari (\u2018who laughs at despair\u2019)", "Ullathani (\u2018she who walks many paths\u2019)", "Corsikanni (\u2018kin to Corsairs\u2019)", "Yn Farwolloch (\u2018deadly to her enemies\u2019)", "Indomi", "Saim-Ingrelli (\u2018the grace of the striking snake\u2019)", "Ysbwrieli (\u2018Starsplinter\u2019)", "Morai-fen", "Undomniel"];
+ const Part3 = ["Fachean", "Tarvaril", "Fa\u0301nai", "Yrmnoch", "Barahir", "Eldrion", "Dis\u2019ar", "Eldos", "Kinshar", "Rhidhal", "Athairnos", "Ea\u0308randil", "Siriolas", "Bahtaam", "Fian", "Eldroth", "Lorinth", "Illisar", "Ealion", "Elronhir", "Tamishar", "Arenal", "Iradil", "Maur", "Requiel", "Lann", "Yrule", "Ra\u2019thar", "Las\u2019ha\u0301r", "Arision", "Ingfhar", "Senn", "Hal\u2019thar", "Yrion", "Silgar", "Konrith"];
+ const Part4 = ["Son of Coheria", "Finarfin", "Eldrion", "the Unyielding Fire", "Glaermril", "Arronna\u0301s", "Gloywach (\u2018the Glow Dragon\u2019)", "the Uncompromising", "of the Noble House of Picarothi", "Enbrondil", "Lladronoth", "Bechareth (\u2018spirit on the wind\u2019)", "Ceifulgaithann (\u2018wind rider\u2019)", "Undroi\u0301l", "Caman (\u2018the avenger\u2019)", "To\u0301ir", "Scion of Rhidmar", "the Wanderer", "of the Clan Randras", "Llmaea-fen (\u2018born of black suns\u2019)", "Rillietar", "Elarique of Alaitoc", "Sydarus Starstrider", "the Implacable", "Ulthos (\u2018speaker of unspeakable truths\u2019)", "Sharna\u0301l", "the Deathly Eloquent", "Born of Twilight", "of the Tower of Stars", "Shelwe-nin (\u2018Song of the Fading Star\u2019)", "the Undaunted", "Rhianthari (\u2018starlight partially obscured by nebula\u2019)", "Eldroneth", "Trithjain (\u2018Storm of the Stars\u2019)", "the Rising Star", "Bhanlhar (\u2018avenger of the lost clan\u2019)"];
+ const Male = document.getElementById("Male").checked;
+ let fullname = pick(Part1) + " " + pick(Part2);
+ if(Male) {
+                    fullname = pick(Part3) + " " + pick(Part4); 
+           }
+ gengen(fullname);
+}
+function thousandsonsgen(){
+ const Part1 = ["Phosis", "Amonhep", "Basteq", "Apophitar", "Thotek", "Kalophis", "Phael", "Thotmas", "Imhoden", "Ankhu"];
+ const Part2 = ["T\u2019Kor", "Basth", "Takar", "Kallisar", "Rhan", "P\u2019Tra", "Manahkmor", "Shen", "Apophontar", "H\u2019Kett"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function deathguardgen(){
+ const Part1 = ["Gurloch", "Suppurax", "Golchor", "Festasmus", "Rancidius", "Mulgh", "Shurgholgh", "Bubox", "Pustus", "Malignus"];
+ const Part2 = ["Urghe", "Volghor", "Grulgus", "the Pestilent", "the Reeking", "the Curdled", "Glouch", "Muttermould", "Thrax", "Trudg"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function worldeatersgen(){
+ const Part1 = ["Aggravax","Ashkal","Ashkorh","Azgorek","Azkor","Barask","Baska","Berek","Bhufor","Brekh","Davask","Drakh","Garrek","Gharrax","Griven","Grosk","Haska","Khaen","Khargos","Khoran","Khorgedd","Khorgor","Khrask","Kreeg","Larsakh","Macer","Nharax","Orbak","Oresk","Rukh","Sarvak","Sorkhos","Tarvakh","Torgax","Trosk","Varrak","Wrask","Zagrek"];
+ const Part2 = ["Axefist","Bloodgrin","Bloodhair","Damaskar","Draxxigor","Eyegouger","Foe Ripper","Ghorum","Gorefist","Hakkan","Kharos","Khorr","Khrul","Korgath","Krassek","Redeye","Rex","Rhugor","Skullfiend","Slaughterborn","Spinecrusher","Spinehacker","Sykoth","Thaxxos","the Blood-hungry","the Blooded","the Butcher","the Cleaver","the Destroyer","the Eightfold","the Furious","the Headsman","the Hound","the Maimer","the Reaper","Varren","Zagoras"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function emperorschildrengen(){
+ const Part1 = ["Abdelis","Abdemis","Adamatar","Aloysian","Amasced","Antinius","Choristus","Clavius","Dalian","Decanus","Dellinus","Eidar","Eidelitor","Fabian","Glabius","Grythan","Hascule","Haxamel","Hurillon","Ilitoias","Julianis","Laviscus","Lucian","Lycon","Porillion","Posca","Retigarius","Saul","Shiron","Solomon","Sperios","Teloss","Travolian","Xiander","Xiortes","Xuvis","Yorios"];
+ const Part2 = ["Alkenex","Aquillian","Atonian","Bericosian","Calarus","Capersi","Cathonian","Demetrius","Fortesian","Fortillian","Iollus","Kaesoron","Kanasiar","Kelemnid","Ketoris","Konemos","Mirrorborn","Nemoleth","of the Silken Blade","Peristoclade","Quiridian","Raescidus","Ryllaneus","Sellion","Sentrillion","Thastalis","the Hedonist","the Idolator","the Inevitable","the Perfect","the Seeker of Pleasures","Thest","Thorn","Tresell","Vairosean","Vastorian","Vastorius","Vessatar","Xandassus"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function alphalegiongen(){
+ const Part1 = ["Admon","Alpharius","Armilus","Askelitar","Asryk","Cronyx","Dynan","Eskyrx","Fedyar","Hammar","Helon","Hyssar","Inigo","Jaego","Kaevius","Knivos","Kylan","Kyphax","Noraphion","Orphos","Orron","Parassus","Poryn","Retryn","Serax","Sheed","Sylas","Tallir","Thkeln","Trago","Travyx","Turelm","Xanias","Yeryx","Zedrak","Zeel"];
+ const Part2 = ["(no cypher)","(no cypher)","18-6","23-7","Alacrax","Altorex","Anastus","Decritus","Dureel","Dynas","Echo","Enigma","Hertzor","Innirus","Korrus","Korsa","Legion","Lightfall","Meerus","Nul","of the Ghost Code","Omnessar","Peritas","Phalorin","Phors","Ranko","Screed","Seed","Sheyr","Siphonian","Speria","Sygnus","the Whisper","Trial","Valdorius","Valpurnius","Vernius","X632","Yartasz"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function blacklegiongen(){
+ const Part1 = ["Zekyr", "Dreccor", "Sorvram", "Thallos", "Zagator", "Korthranus", "Drekva", "Thygmor", "Ashrok", "Azmodial"];
+ const Part2 = ["Aximand", "the Vengeful", "Thrice-Cursed", "Korda", "the Black", "Daemonsblade", "Orakar", "Naxos", "the Mad", "Faithslayer"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function adeptusmechanicusgen(){
+ const Part1 = ["Sy-gex", "Tyr", "Dak", "Ar", "Kappic-Schoelendt", "Tyba", "Dorox", "Alb", "Zyto-Neumann", "Xixos", "Kau", "Rho", "Delpha", "Chu", "Ix", "Neng-Pho", "Bheta", "Zhu", "Lho", "Teppa-Nyxos", "Kor", "Dox", "Sek", "Gryphonne-Reductus", "Tov", "Eq", "Mu", "Rhy", "Dos", "Exitor-Dho", "Fel", "Actus", "Xor", "Decima", "Rax", "Kas"];
+ const Part2 = ["-511", "-1111", "-XXVII", "-802", "-323/mk12", "-089", "-744", "-VII", "-18.1", "-656", "-IV", "-110", "-0.4343", "-97/mk24", "-XIX", "-7", "-110100", "-3.16", "-961.34254", "-MXV", "-99", "-2918", "-888.88", "-404", "-1010", "-0.44//K", "-745", "-66.75/mk98", "-1/1/2", "-99941", "-83.2", "-575", "-79.09/5", "-668.2", "-1/5", "-666/2"];
+ gengen(pick(Part1) + pick(Part2));
+}
+function astramilitarumgen(){
+ const Part1 = ["Jens", "Karsk", "Hekler", "Reeve", "Pavlo", "Hektor", "Nils", "Thenmann", "Kyser", "Erlen", "Raphe", "Creed", "Lasko", "Ackerman", "Mattias", "Mortens", "Dansk", "Feodor", "Tomas", "Kolson", "Vance", "Pask", "Niems", "Gryf", "Sonnen", "Ekhter", "Farestein", "Dekker", "Graf", "Arvans", "Viers", "Kolm", "Bask", "Vesker", "Pavlo"];
+ const Part2 = ["Gunnarsen", "Harker", "Grytt", "\u2018Snake\u2019 Vandien", "Greiss", "Stryker", "Storm", "Lance", "\u2018Crazy\u2019 Winters", "Cage", "Hammer", "Cobra", "\u2018Hardhead\u2019 Jackson", "\u2018Stonefist\u2019 Kage", "\u2018Boss\u2019 Stransky", "\u2018Bomber\u2019 Johnson", "Jacksen", "Marshall", "\u2018Fangs\u2019 Lorson", "\u2018Cold-eye\u2019 McKay", "Wolf", "\u2018Shiv\u2019 Frost", "Brent", "\u2018Ironheart\u2019 McKillen", "\u2018Killer\u2019 Crowe", "\u2018Wildman\u2019 Weiss", "\u2018Ice\u2019 Creek", "Dane", "Steeljaw", "Dransky", "\u2018Slim\u2019 Hasker", "Mason", "Hawks", "Axel", "Carver", "Payne"];
+ const Part3 = ["Vensk", "Skarrsen", "Chernov", "Dushenko", "Rynsk", "Gorska", "Varence", "Nyska", "Putran", "Dorff", "Tyvosk", "Polanski", "Drekoff", "Vorn", "Hapscheldt", "Olof", "Trevinska", "Schonnen", "Kleiss", "Borys", "Ivanek", "Smirnek", "Kuzentsev", "Vasilesnev", "Petravitch", "Skolov", "Fedorev", "Morazev", "Volko", "Lebesnev", "Egoryn", "Pavlek", "Kozlev", "Stepanovic", "Nikoli", "Orlakev"];
+ const Part4 = ["Alem", "Hallain", "Laskair", "Nathal", "Altarem", "Mohal", "Dharem", "Hasman", "Sonnam", "Ushmet", "Shadnan", "Asphret", "Ushad", "Tal\u2019hasen", "Ashmyr", "Shashlem", "Haseed", "Ushar", "Raheim", "Dassed", "Sahleim", "Alhret", "Khaleeth", "Eshmet", "Ul\u2019shalem", "Talannar", "Al\u2019phareim", "El\u2019shan", "Khabir", "Khalym", "\u2018Swiftrider\u2019", "\u2018Dunestrider\u2019", "\u2018Hawkseye\u2019", "\u2018Sand Devil\u2019", "\u2018the Mirage\u2019", "\u2018the Hunter\u2019"];
+ const onlyBoValue = document.getElementById("blorc").checked;
+ const shamanValue = document.getElementById("sham").checked;
+ const onlySoValue = document.getElementById("savorc").checked;
+ const allValue = document.getElementById("allorc").checked;
+ let fullname;
+ if(allValue){fullname = pick(Part1);}
+ if(onlyBoValue){fullname = pick(Part2);}
+ if(onlySoValue){fullname = pick(Part3);}
+ if(shamanValue){fullname = pick(Part4);}
+ gengen(fullname);
+}
+function adeptussororitasgen(){
+ const Part1 = ["Danica", "Constantia", "Elanor", "Mariah", "Lisbett", "Kataryn", "Helenica", "Isadore", "Amelia", "Elyza"];
+ const Part2 = ["Serenitas", "Bellicos", "Sacristus", "N\u2019bata", "Lucinias", "Honourifica", "Dasyrov", "Caritas", "Vengor", "Shengg"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function adeptuscustodesgen(){
+ const Part1 = ["Tybalus", "Yorta'kar", "Jaeharl", "Tauramacchis", "Tristraen", "Sanash", "Pydoris", "Hasturian", "Nicodemus", "Tybaris"];
+ const Part2 = ["Constor", "Gallimadean", "Drund", "Talorn", "Castivar", "Desh", "Calaxor", "Ghau", "Desmodages", "Maxin"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function greyknightsgen(){
+ const Part1 = ["Anval","Arno","Caddon","Drako","Drystan","Garran","Kaladour","Pelenas","Valdar","Verdan"];
+ const Part2 = ["Varn","Kai","Cromm","Solor","Ordan","Gerontas","Torvin","Thule","Mordrak","Trevan"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function darkangelsgen(){
+ const Part1 = ["Azkarael", "Zakeal", "Rhellion", "Zoreal", "Azathor", "Shoriel", "Nemator", "Ezekial", "Bethor", "Zadakial"];
+ const Part2 = ["Zaborial", "Azdallon", "Zacahrus", "Astathor", "Seraphus", "Zanthor", "Kaelon", "Namaat", "Soriel", "Belian"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function salamandersgen(){
+ const Part2 = ["K\u2019Gosi", "Dallor", "Jurr", "Mir\u2019Shan", "Shenn", "Ta\u2019Phor", "Rhoshan", "Antanar", "Shal\u2019Dar", "Gar\u2019Dos"];
+ const Part1 = ["Dak\u2019Lyr", "Sho\u2019Tan", "Tsu\u2019Gar", "Fugean", "Xavus", "Nubari", "Vorr\u2019n", "Sholta", "Xa\u2019Vor", "Leotrak"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function spacewolvesgen(){
+ const Part1 = ["Gunnar", "Ulfrich", "Laars", "Sven", "Wulfgar", "Erik", "Dolf", "Leif", "Olaf", "Torrvald"];
+ const Part2 = ["Ironaxe", "Icefang", "Orksbane", "the Red", "Wyrmslayer", "Thunderhowl", "Stormstrider", "Stoneshield", "Trollbane", "Greymane"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function ironhandsgen(){
+ const Part1 = ["Arrven", "Gorrloch", "Shorrgol", "Galorr", "Dorrghun", "Kaagos", "Barrgus", "Ghorrean", "Orros", "Gdolkin"];
+ const Part2 = ["Feirros", "Graevarr", "Bannus", "Lydriik", "Terrek", "Korvaan", "Urloch", "Rauth", "Varrox", "Xeriis"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function whitescarsgen(){
+ const Part1 = ["Anagar", "Khajog", "Suberei", "Khoros", "Jaygor", "Seglei", "Jurgah", "Kaljyk", "Kulghu", "Saghari"];
+ const Part2 = ["Gatughan", "Yesuberei", "Ghol", "Jaghol", "Kandakh", "Mologhai", "Ujumm", "Bhangleo", "J\u2019ungah", "Aghulo"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function ravenguardgen(){
+ const Part1 = ["Aajz", "Kyrin", "Vykus", "Tryris", "Ordias", "Navaer", "Syras", "Aevar", "Reszan", "Vorkyl"];
+ const Part2 = ["Kaed", "Solari", "Solaq", "Qeld", "Korvaedyn", "Vaanes", "Torvaec", "Klayde", "Moradus", "Ordaris"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function bloodangelsgen(){
+ const Part1 = ["Amareus", "Erasmus", "Rafael", "Morlaeo", "Leonid", "Faustian", "Donatelus", "Raelyn", "Nicodemus", "Furian"];
+ const Part2 = ["Belarius", "Seraphan", "Moriar", "Raneil", "Castivar", "Arteros", "Redolpho", "Lorenso", "Amuto", "Rephas"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function crimsonfistsgen(){
+ const Part1 = ["Alexis", "Algernon", "Klede", "Pedro", "Drigo", "Ashor", "Alessio", "Selig", "Olbyn","Caldimus","Matteo","Raphael","Ishmael","Javier","Marqol","Eustace"];
+ const Part2 = ["Polux", "Traegus", "Sargo", "Kantor", "Alvez", "Drakken", "Cortez", "Torres", "Kadena","Ortiz","Morrelis","Acastus","Icario","Adon","Tomasi","Mendoza"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function imperialfistsgen(){
+ const Part1 = ["Lydus", "Darnath", "Lexandro", "Nereus", "Tylaeus", "Vorn", "Tor", "Boreas", "Jago", "Oreas"];
+ const Part2 = ["Hagen", "Mirhen", "Garadon", "Lytanus", "Danithor", "Markov", "Mordelai", "Julan", "Darsway", "Lordann"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function ultramarinesgen(){
+ const Part1 = ["Marius", "Agnathio", "Ollonius", "Cato", "Titus", "Agies", "Gaius", "Andrus", "Marcus", "Cassius"];
+ const Part2 = ["Chronus", "Tarentus", "Dysorius", "Cassus", "Acastian", "Varenus", "Apollon", "Aggennor", "Castus", "Poladrus"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function eschergen(){
+ const Part1 = ["Alexa","Ami","Anya","Ava","Bella","Belle","Betrrica","Betti","Brae","Candela","Carla","Cherry","Coralee","Cyberna","Cylena","Cyniss","Echolna","Elle","Essa","Estker","Exa","Exene","Fable","Freyda","Frincia","Frincinea","Gielle","Gwendalin","Haerana","Helza","Io","Iris","Jelena","Jeliki","Jemini","Jenn","Jerra","Jett","Kaia","Kaiya","Karjir","Kria","Lace","Layyloe","Lillay","Lindi","Lydial","Lyrani","Marika","Mert","Morta","Mylinnax","Naidiane","Neabelle","Nemo","Nenrietta","Niko","Niko","Nokomi","Nyda","Nyriiall","Olina","Ollina","Ophelia","Persophie","Poly","Prianaa","Ragg","Rain","Ramona","Raven","Reina","Rhosinn","Rochele","Rox","Roxaria","Rynne","Sakura","Selene","Silver","Sioux","Swan","Trix","Trixxie","Tumala","Undu","Varik","Vega","Viata","Vinn","Violet","Vorg","Yarella","Yolanda","Yonda","Zarann"];
+ const Part2 = ["\'Angel of Mercy\'","\'Pick-Me-Up\'","\'Slickblade\'","\'Sweetbreath\'","\'the Queen of the Claws\'","\'the Red\'","\'the Whisper\' Nulddina","Banshee","Diamondblade","Fargo","Kinblade","Nohm","Nulddina","Pavo","Scar","Skorn","Synn","the Explorer","the Huntress","the Stalker","the Stitch","the Veiled","the Wise","Thrice-Cut","Vega"];
+ const Part3 = ["\'Acid\'","\'Barbed\'","\'Bloody\'","\'Bomber\'","\'Chainblade\'","\'Miss Fire\'","\'Sawtooth\'","\'Slice\'","\'Slippery\'","\'Stomper\'","\'Wild\'","\'Wildeye\'","Bittercat","Cut-Up","Lady","Unruly"];
+ const Part4 = ["Acid","Belladonna","Caustic","Dancing","Electric","Ferocious","Gallows","Hydra","Indigo","Jealous","Keening","Leather","Murderous","Neon","Opulent","Poison","Quarrelling","Relentless","Stiletto","Toxin","Ultraviolet","Violet","Wild","Xenon","Yellow","Zero","Ash","Bittersweet","Black","Blistering","Blood","Carrion","Dead","Lost","Manacled","Needle","Piercing","Scarlet","Selene\'s","Sump River","Toxic","Tunnel","Tunnel","Tunnel","Violet","Wikid","Wild","Wyld","Wyrd","Hell\'s"];
+ const Part5 = ["Aces","Belles","Claws","Dames","Eclipse","Femmes","Graces","Hellions","Injectors","Jinx","Kiss","Lionesses","Minxes","Nevermore","Oilers","Princesses","Queens","Riot","Shadows","Terrors","Urge","Venom","Wardens","Executioners","Yearners","Zealots","Sirens","Blades","Orchid","Blades","Orchids","Queens","Eyes","Girls","Mavericks","Maidens","Feathers","Pack","Tigers","Hellions","Alleycats","Cats","Harridans","Vypers","Death","Sisters","Trackers","Panthers","Sisters"];
+ const Part6 = ["Sisters of Fire","Hell\'s Own"];
+ const random6 = parseInt(Math.random() * 5);
+ var random7 = parseInt(Math.random() * Part4.length);
+ const random8 = parseInt(Math.random() * 3);
+ let fullname = 0;
+ const gang = document.getElementById("title").checked;
+ if (gang){ 
+ 	if(random7 > 0){
+ 		fullname = "The " + pick(Part4) + " " + pick(Part5);}
+ 	else {
+ 		fullname = "The " + pick(Part6);}
+ 		}
+ if (!gang){
+ 	if (random6 > 0){
+ 		fullname = pick(Part1);}
+ 	else{ 
+ 		  if (random8 > 0){
+ 			 fullname = pick(Part1) + " " + pick(Part2);}
+ 		  else {
+ 			 fullname = pick(Part3) + " " + pick(Part1);}
+ 	 }
+ 	}
+ gengen(fullname);
+}
+function goliathgen(){
+ const Part1 = ["\'Bitterchain\'","\'Razorhead\'","Akun","Amkul","Azkul","Bitterchain","Bladefist","Blitz","Bonesnapper","Borgon","Borker","Borker","Bosrak","Brak","Brakk","Brok","Brun","Crowle","Dead\'ead","Drago","Drar","Garak","Gark","Gask","Gax","Ghork","Gonk","Grand Dog","Grendel","Griza","Grog","Gruz","Gund","Gunk","Gunta","Hagen","Haks","Hamzul","Hench","Hurn","Jawgor","Jax","Jax","Jek","Jek","Jok","King","Korak","Kord","Korg","Krake","Krog","Krook","Kruger","Krugrug","Kunnk","Logan","Lorg","Mankle","Metalfang","Moruta","Mungo","Nalk","Nathan","Nedhin","Nook","Nox","Nrug","Nuk","Nurk","Nurro","Orman","Pkek","Punker","Ren","Reth","Ribsmasher","Rork","Runik","Sawskull","Skrall","Skullshank","Skullsmasher","Spike","Stranglechain","Stubber","Thal","Thrugga","Trenl","Trug","Turok","Ukak","Undu","Varik","Vinn","Vorg"];
+ const Part2 = ["\'Blood and Gore\' Tolor","\'Forgemaker\'","\'Gunfist\'","\'Sharpeye\'","\'Sourbreath\'","\'Steelbrain\'","\'Steelskin\'","\'Steeltooth\'","Half-Face","Hammer","Hammereyes","Hammerface","Hammerhead","Hardfist","Iron-fist","Knuckleblades","Meatfist","Skor","Steeltooth","the \'Merciful'","the Beastmaster and \'Maici\'","the Butcher","the Fist","the Gutter","the Ripper","the Scythe","the Stimmer","the Undefeated","Tolor"];
+ const Part3 = ["\'Bone Reaper\'","\'Chemhound\'","\'Cutter\'","\'Fang\'","\'Hammerhead\'","\'Ironbreath\'","\'Nohawk\'","\'Seven Whips\'","\'Sharp Tooth\'","\'Skullchucker\'","\'Snarler\'","\'Spiker\'","\'Splitter\'","\'Steelgate\'","\'Stud\'","\'Tenderizer\'","\'Crusher\'","Grinder","Promethium","\'Spike\'","Two-Guns"];
+ const Part4 = ["Armoured","Blazing","Chain","Dark","Elevator","Forge","Grime","Hotwire","Iron","Jagged","Kerosene","Lave","Mighty","Nightmare","Oxide","Power","Quarry","Rust","Steel","Towering","Ultimate","Violent","Wasteland","Extreme","Yoke","Zealous","Bloodrun","Bone","Broke-knee","Broke-toorh","Broken","Burner","Burning","Dog","Fire","Forge","Foundry","Furnace","Furnace","Girder","Iron","Ironfist","Jaw","Junktown","Knuckle","Molten","Oxide","Rivet","Rockcrete","Scrap","Scraphammer","Shiv’s","Smog","Spiked","Steel","Steel","Steel","Steeltooth\'s","Stoneheart","Sump","Fire","Twisted","Underforge","Undertown","Unforged","Kroc"];
+ const Part5 = ["Aggressors","Bolts","Cleavers","Drillers","Enders","Freaks","Giants","Hammers","Ingots","Juggernauts","Killers","Lunatics","Maniacs","Nails","Operators","Princes","Quarriers","Ragers","Skulls","Torches","Uglies","Villains","Warriors","Extractors","Yankers","Zoomers","Boys","Crushers","Boys","Boys","Hammers","Brutes","Chains","Soldiers","Krocs","Guardians","Born","Howlers","Runners","Grinders","Snappers","Brotherhood","Breakers","Rioters","Boys","Axes","Crushers","Hammers","Brutes","Lords","Warriors","Crushers","Axes","Devils","Brutes","Cleavers","Snappers","Crushers","Killers","Axes","Sons","Grinders","Brutes","Brawlers","Chains","Dogs"];
+ const Part6 = ["Bonecrushers","Hammerheads","Ironlords","Brutes of Trazior","Daughters of the Furnace","Fiends of the Forge","Grip of Iron","Slaughterfists","Sons of Steel","Krocdogs"];
+ const random6 = parseInt(Math.random() * 5);
+ var random7 = parseInt(Math.random() * Part4.length);
+ const random8 = parseInt(Math.random() * 3);
+ let fullname = 0;
+ const gang = document.getElementById("title").checked;
+ if (gang){ 
+ 	if(random7 > 0){
+ 		fullname = "The " + pick(Part4) + " " + pick(Part5);}
+ 	else {
+ 		fullname = "The " + pick(Part6);}}
+ if (!gang){
+ 	if (random6 > 0){
+ 		fullname = pick(Part1);}
+ 	else{ 
+ 		  if (random8 > 0){
+ 			 fullname = pick(Part1) + " " + pick(Part2);}
+ 		  else {
+ 			 fullname = pick(Part3) + " " + pick(Part1);}
+ 	 }
+ 	}
+ gengen(fullname);
+}
+function orlockgen(){
+ const Part1 = ["Grimm","Ironhead","Nark","Groff","Fast","Don","Rock","Thorson","Jo","Silent","Sour","Fist","Gann","Red","Zeke","Lander","Mo","Radder","Crow","Duster","Daerl","Una","Nadron","Ridieon","Roky","Zed","Ski","Jack","Karl","Orak","Jon","Dylon","Steelteeth","Lander","Bryn","The Major","Harlon","Slate","Jones","Laxo","Grim","Jorn","Ajax","Jak","Destrein","Landox","Mae","Digger","Lazlow","Jax","Crassus","Grendel","Maeder","Narkos","Joh","Jakson"];
+ const Part2 = ["\'Hackjaw\'","\'Ironarm\'","\'Mercy\'","Bailer","Barkin","Crow","Duster","Endr","Foxx","Greyson","Hammerstein","Jones","Jones","Krow","Lanni","Merdena","O\'Donell","Strong","Two-Fist","Zeke"];
+ const Part3 = ["\'Bommer\'","\'Cinder\'","\'Gunner\'","\'Kilo\'","\'Pretty Boy\'","\'Scholar\'","\'Seared\'","Maeder","Old","Scrapjack","Shotgun"];
+ const Part4 = ["Ash-waste","Bandsaw","Chain-breaker","Drill Bit","Elevator","Firstborn","Galvanised","Hazard stripe","Iron","Jackhammer","Kiln-forged","Leviathan","Meteoric","Ninth-share","Original","Promethium","Quarter-share","Rathole","Surehand","Ten-tonne","Underground","Vox-mouth","Wrecking Ball","Exceptional","Yoke-breaker","Zooming","Ash","Ash","Ash","Ashtown","Downtown","Iron","Rooftop","Rust","Fistborn","Sump","Underhive","Uptown","Waste","Waste"];
+ const Part5 = ["Angels","Bondsmen","Crew","Dockers","Earthshakers","Fists","Gauntlets","House-sworn","Islander","Jokers","Kinsmen","Losers","Miners","Neutralisers","Oilers","Posse","Quitters","Renegades","Strikers","Tough Guys","Uplanders","Vaulters","Warriors","Extractors","Youth","Zoo","Riders","Runners","Warriors","Angels","Runners","Spikes","Riders","Riders","Losers","Dogs","Dogs","Miners","Wanderers","Warriors"];
+ const Part6 = ["Jailbirds","Outriders","Sons of Iron"];
+ const random6 = parseInt(Math.random() * 5);
+ var random7 = parseInt(Math.random() * Part4.length);
+ const random8 = parseInt(Math.random() * 3);
+ let fullname = 0;
+ const gang = document.getElementById("title").checked;
+ if (gang){ 
+ 	if(random7 > 0){
+ 		fullname = "The " + pick(Part4) + " " + pick(Part5);}
+ 	else {
+ 		fullname = "The " + pick(Part6);}}
+ if (!gang){
+ 	if (random6 > 0){
+ 		fullname = pick(Part1);}
+ 	else{ 
+ 		  if (random8 > 0){
+ 			 fullname = pick(Part1) + " " + pick(Part2);}
+ 		  else {
+ 			 fullname = pick(Part3) + " " + pick(Part1);}
+ 	 }
+ 	}
+ gengen(fullname);
+}
+function vansaarsgen(){
+ const Part1 = ["Aldona","Alsander","Anbrecht","Astrix","Baer","Basteaan","Cablis","Dael","Darius","Diektrik","Elesk","Elmer","Engael","Espen","Fernand","Fisyer","Hannak","Hanselt","Hansvet","Heisen","Jean","Jedidah","Jerge","Jeroen","Julien","Karll","Koen","Lars","Larz","Lisbet","Lucien","Maex","Marteeus","Max","Nixorem","Obidiah","Onia","Otto","Rutgeer","Sargen","Schae","Schylaar","Skorgen","Yvarin","Kai"];
+ const Part2 = ["\'Darkfinder\'","\'Nine Eyes\'","\'Octavinum\'","\'Splinter Shot\'","\'The Hammer\'","Aldona","Alercht","Barnola","Coldfire","Fury","Gandora","Icearch","Laart","Larz","Lefo","Lighting Hand","Longshot","Nirial","Sargen","Seven","Svard","Valkyr","Vylkur","Killswitch"];
+ const Part3 = ["Broken Brotherhood","Brotherhood of Plasma","Code Warderns","Coldfire Cabal","Crackling Shields","Deayglow Dragons","Electric Hunters","Network Nexus","Network Spiders","Nexus Nines","Radfire Nobles","Radfire Scholars","Sentinels of Steel"];
+ const randomNumber4 = parseInt(Math.random() * 3);
+ let fullname = 0;
+ const gang = document.getElementById("title").checked;
+ if (gang){fullname = "The " + pick(Part3);}
+ if (!gang){
+ 	if (randomNumber4 > 0){
+ 		fullname = pick(Part1);}
+ 	else{
+ 	 fullname = pick(Part1) + " " + pick(Part2);}
+ 	
+ 	}
+ gengen(fullname);
+}
+function enforcersgen(){
+ const Part1 = ["\'Azaral\'","\'Bastion\'","\'Blackout\'","\'Broadside\'","\'Cyclone\'","\'Fusillade\'","\'Gidion\'","\'Hauler\'","\'Hydexus\'","\'Judex\'","\'Kexdal\'","\'Kroc\'","\'Lucky\'","\'Maedox\'","\'Nargo\'","\'Piston\'","\'Poliux\'","\'Purge\'","\'Scorch\'","\'Shutdown\'","\'Sidewinder\'","\'Sledge\'","\'Shutout\'"];
+ const Part2 = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+ const Part3 = ["ALPHA","BETA","GAMMA","DELTA","EPSILON","ZETA","ETA","THETA","IOTA","KAPPA","LAMBDA","MU","NU","XI","OMICRON","PI","RHO","SIGMA","TAU","UPSILON","PHI","CHI","PSI","OMEGA"];
+ const Part4 = ["ALABASTER","AMARANTH","AMBER","AZURE","BISTRE","BLACK","BLUE","BROWN","BURGUNDY","CADET","CANARY","CERISE","CHESTNUT","COPPER","CORAL","CRIMSON","CYAN","EBONY","EMERALD","FALLOW","FAUN","GOLD","GRAY","GREEN","INDIGO","IRIS","IVORY","JADE","JET","KOBI","LAVENDER","MAGENTA","MAROON","MAUVE","OCHRE","OPAL","ORANGE","ORCHID","PINK","PURPLE","RED","ROSE","RUBY","RUSSET","SAGE","SCARLET","SEPIA","SIENNA","SILVER","TURQUOISE","TUSCAN","UMBER","VERMILLION","VIOLET","WHITE","YELLOW"];
+ const randomNumber5 = parseInt(Math.random() * 999) + 1;
+ const random6 = parseInt(Math.random() * 4);
+ let fullname = 0;
+ const gang = document.getElementById("title").checked;
+
+ if (gang){
+ 	fullname = pick(Part3) + "-" + pick(Part4) + "-" + pick(Part2);}
+ if (!gang){
+  	if (random6 > 0){
+  		if (randomNumber5 < 100){fullname = pick(Part2) + "-0" + randomNumber5;}
+  		if (randomNumber5 < 10){fullname = pick(Part2) + "-00" + randomNumber5;}
+  		if (randomNumber5 > 99){fullname = pick(Part2) + "-" + randomNumber5;}}
+  	else{
+  	fullname = pick(Part1);}
+ }
+ gengen(fullname);
+}
+function cawdorgen(){
+ const Part1 = ["Baldryk","Barbet","Beluque","Bliaut","Caban","Cainsil","Coif","Cottle","Cottus","Cowl","Cyclas","Dagged","Epitoga","Gambeson","Gonne","Greda","Grozse","Grunt","Halbedash","Hauberk","Hennin","Houve","Hoyke","Kyrzul","Matthias","Moufles","Phrygian","Shyrth","Shyrth","Snivels","Snood","Tippet","Touret","Waloom","Wardecors","Wimple","Amice","Hardryn","Baldrum","Caul","Rattus","Journade"];
+ const Part2 = ["\'Blessed\'","\'Picktooth\'","\'Hatchet\'","Burnscars","Cinderflesh","Coffinail","Cowl","Gongwarden","Hooknose","Scruttor","Swarmbrother","the Brute","the Ratfinder","Beggarbait","Cribstealer","the Keeper","Tatterskin","Gambeson"];
+ const Part3 = ["Blessed Cowls","Brethren of Bones","Crowbiters","Damned Nooses","Doomsayers","Forgiven Few","Hoodedmen","Candlekin","Hanged","Trodden","Oathkept"];
+ const random2 = parseInt(Math.random() * Part2.length);
+ const random4 = parseInt(Math.random() * 5);
+ let fullname = 0;
+ const gang = document.getElementById("title").checked;
+ if (gang){
+ 		fullname = "The " + pick(Part3);}
+ if (!gang){
+ 	if (random4 > 0){
+ 		fullname = pick(Part1);}
+ 	else{ 
+ 		  if (random2 > 2){
+ 			 fullname = pick(Part1) + " " + Part2[random2];}
+ 		  else {
+ 			 fullname = Part2[random2] + " " + pick(Part1);}
+ 	 }
+ 	}
+ gengen(fullname);
+}
+function delaquegen(){
+ const Part1 = ["\'Ghast\'","\'The Forgotten\'","Abnoth","Altheia","Azoth","Cthepa","Cxauth","Cyclelos","Cyphered","Dusk","Ephemis","Ghost","Gloom","Hezxekel","Horath","Horrath","Iagorth","Kthula","Mandoth","Mirage","Mist Stalker","Mithrha","Naath","Naegrath","Narragtex","Needle","Phantom","Phase","Poisonbreath","Salubritas","Shadow","Spectre","Tenebrous","Ulzcha","Ulzcha","Umbra","Vexx","Whisper","Wraith","Xexoth","Yartep","Kaebh","Yagoth","Dendrah","Trembra"];
+ const Part2 = ["\'Dark Hand\'","Cthepa","Gloom-Stalker","The Blade","The Formless","The Knife","The Night Serpent","The Sibilant","The Soulless","The Zevite","Three Eye","Vexx","Whisper","Whisperblade","Wraith","Xexoth","Yartep"];
+ const Part3 = ["Ash","Barrelden","Cheapside","Dark","Downhive","Sewerrun","Shadow","Silent","Silken","Sumptown","Underworld","Waste"];
+ const Part4 = ["Gloom","Ones","Serpents","Specters","Spektres","Spiders","Spiders","Stalkers","Stalkers","Walkers","Wraiths","Wraiths"];
+ const Part5 = ["Brothers of Shadow","Coven of Lies","Whisperkin"];
+ const random6 = parseInt(Math.random() * 5);
+ var random7 = parseInt(Math.random() * Part3.length);
+ let fullname = 0;
+ const gang = document.getElementById("title").checked;
+ if (gang){ 
+ 	if(random7 > 0){
+ 		fullname = "The " + pick(Part3) + " " + pick(Part4);}
+ 	else {
+ 		fullname = "The " + pick(Part5);}}
+ if (!gang){
+ 	if (random6 > 0){
+ 		fullname = pick(Part1);}
+ 	else{ 
+ 			 fullname = pick(Part1) + " " + pick(Part2);
+ 	 }
+ 	}
+ gengen(fullname);
+}
+function corpsegrindersgen(){
+ const Part1 = ["Akor","Angrek","Bakruz","Blunaz","Breath laced with blood","Death encroaching on ignorant minds","Despair given form","Felkormog","Flenser of Skulls","Gornite","Gruolok","Huzra","Iokmor","Jugang","Jurgoth","Korgon","Koryuknartur","Krag","Morkor","Nightmare of a thousand widows","Rongorangoth","Skarothangkorath","Skorgoracc","Skrikograth","Skrvovar","Slokorgamul","The Blood Drenched","The Hand of Crimson","The Song of Sinew","The Waiting Crimson","Waz","Xarnoalthungon","Xorq","Xugand","Yiur","Zazite","The Weeping Edge","Korkagore","Yezk"];
+ const Part2 = ["Decaying Flesh","Eight Thousand Blows","Forgotten Glories","Forgotten Vows","Infinite Rage","Tearing Hands","the Keen Edge","the Severed Vessel","Unravelled Hope","the Primal Cut"];
+ let fullname;
+ const gang = document.getElementById("title").checked;
+ if (gang){
+ 		fullname = "Lodge of " + pick(Part2);}
+ if (!gang){
+ 		fullname = pick(Part1);}
+ gengen(fullname);
+}
+function krootgen(){
+ const Part1 = ["Kra", "Gohk", "Ahkra", "Dohra", "Cho", "Byahk", "Grahm", "Khor", "Ohrak", "Tehk"];
+ const Part2 = ["'to", "cha", "'ka", "'yo", "grok", "'ah", "'ohk", "ek", "'tcha"];
+ const Part3 = ["Gota", "Krrah", "Ch'choh", "Tohrrok", "Ga'ah", "Kyrek", "Ghorkha", "Drr'rr", "Yo'toh", "Rhekk"];
+ gengen(pick(Part1) + pick(Part2) + " " + pick(Part3));
+}
+function genstealergen(){
+ const Part1 = ["Gannar", "Dhraz", "Yohrick", "Kol", "Hastun", "Sayben", "Hollan", "Narek", "Rauss", "Basc", "Davon", "Zask", "Nasser", "Seimon", "Jacobiah", "Skir", "Ghaskin", "Foyle", "Kreen", "Judh", "Mordecai", "Isaak", "Michon", "Jerec", "Aldren", "Madrax", "Vyrion", "Hollun", "Steen", "Pike", "Mallick", "Groust", "Eldric", "Yorl", "Xandus", "Crasker"];
+ const Part2 = ["Druchmann", "Kreel", "Desh", "Cavorla", "Krauss", "Gardlinger", "Zorbech", "Stennvar", "Varnway", "Starn", "Baumgart", "Drisso", "Sammer", "Helm", "Tarnright", "Valka", "Kelbrech", "Kheiser", "Madrach", "Venner", "Novek", "Svodnor", "Black", "Barchus", "Matterzhek", "Onderghast", "Thrace", "Lhaska", "Rezzekh", "Carleon", "Drevender", "Seifer", "Vreel", "Xyben", "Gorl", "Arnalt"];
+ gengen(pick(Part1) + pick(Part2));
+ }
+function tyranidsgen(){
+ const Part1 = ["The Omega", "The Creeping", "The Crimson", "The Kraken\u2019s", "The Leviathan\u2019s", "The Behemoth\u2019s", "Jormungandr\u2019s", "The Serpent\u2019s", "The Hydra\u2019s", "The Rising", "The Devouring", "The Looming", "The Gorgon\u2019s", "The Ravening", "The Kolorian", "The Icharian", "The Writhing", "The Inescapable", "The Dark", "Kronos\u2019", "The Nightmare", "Tiamet\u2019s", "The Ominous", "Ouroboris\u2019", "The Ancient", "The Slithering", "The Bladed", "The Monstrous", "The Elder", "The Nameless", "The Hunter\u2019s", "The Formless", "The Sudden", "TheVoid", "The Lurking", "The Hungry"];
+ const Part2 = ["Infestation", "Talon", "Fang", "Claw", "Tendril", "Coil", "Eye", "Brood", "Shadow", "Dread", "Swarm", "Barb", "Jaws", "Assassins", "Slayers", "Executioners", "Ghosts", "Echo", "Terrors", "Horrors", "Lurkers", "Heralds", "Sting", "Bite", "Doom", "Butchers", "Devils", "Wraiths", "Menace", "Shroud", "Annihilators", "Scream", "Pall", "Devourers", "Stalkers", "Maw"];
+ gengen(pick(Part1) + " " + pick(Part2));}
+function taugen(){
+ const Part1 = ["Sul\u2019an", "Ho\u2019sen", "Atsumo", "N\u2019ea", "Els\u2019im", "K\u2019yen", "Or\u2019os", "Pashera", "Rais", "Sel\u2019tas", "Be\u2019tol", "E\u2019yaal", "Murakan", "To\u2019jo", "Kurami", "U\u2019so", "Lorresa", "Paluto", "Ren\u2019as", "Lor\u2019ma", "Tash\u2019lor", "Watana", "Nomura", "Nishino", "D\u2019tano", "Xo\u2019yima", "T\u2019suka", "Kais", "Shamasa", "Pu\u2019jato", "Ju\u2019yem", "Ga\u2019mo", "Kasashi", "Lamano", "Mi\u2019daro", "Uvash\u2019a"];
+ gengen(pick(Part1));
+}
+function votanngen(){
+ const Part1 = ["Kôrv","Krynn","Ûkyr","Yôht","Vykât","Nârunn","Hâk","Vôrk","Yâhp","Tôryk","Vânn","Ôkhav","Hêtynn","Ânnyk","Yûka","Pykô","Vâk","Ûtann","Okkâ","Vynn","Êttok","Nîyak","Drûkh","Okyp","Ûnnvyr","Kôttak","Âdunn","Hyvôr","Akkyt","Tôk","Yhêl","Ynnôk","Hâvyr","Pyûk","Pûnnak","Âktol"];
+ const Part2 = ["Thuûrk","Grât","Hypêk","Trânna","Krônn","Hegêm","Ymyk","Conglahr","Ûrann","Regyl","Sôldyk","Hyrthka","Farstrydd","Dêlvyk","Cthynn","Gylûr","Stykk","Rokhewyr","Stârflyt","Iyrnwêrke","Thûndryk","Sêykr","Skêyfyr","Wârspeke","Vôtyk","Kynn","Gâard","Keen Eye","Stôyk","Star Seeker","the Wise","the Unbroken","the Stern","the Lucky","the Swift","the Strong"];
+ const Part3 = ["Pôkhamm","Ymmâ","Kîrv","Yymm","Vêyha","Êkhya","Ôrumm","Dêki","Yvâ","Mûrym","Ûmyk","Ryûk","Sîmmka","Êkyr","Hâluk","Vûkha","Kylû","Vyhâ","Kîmm","Pîya","Âmmuk","Hêykha","Kâhyrm","Îyka","Pôyuk","Ymmî","Pêmm","Yrêk","Vîya","Êyv","Vêmmha","Pôlyk","Ymmê","Îhap","Mêmm","Kvyma"];
+ const Part4 = ["Ânhad","Hûri","Rânsa","Pêrya","Ônas","Emônyr","Myrr","Côn","Sûrta","Ûlaty","Skârstreng","Kêynshot","Stûrmm","Dûtyk","Fyrgrîte","Vydsêke","Wôlbrokke","Nytgâard","Flytstêp","Hârvyr","Blôhdfyr","Sêyr","Iyrnstêde","Deyprôkh","Faenwrôght","Ânstyr","Styrdâh","Fyrfist","Beast Slayer","Ork Bane","the Stoic","the Skilled","the Strong","the Intrepid","the Unyielding","the Fierce"];
+ const Male = document.getElementById("Male").checked;
+ let fullname;
+ if(Male) {
+                    fullname = pick(Part1) + " " + pick(Part2); 
+           } 
+ if(!Male) {
+                    fullname = pick(Part3) + " " + pick(Part4); 
+           }
+ gengen(fullname);
+}
+function blacktemplarsgen(){
+ const Part1 = ["Ulrund","Lyle","Sagren","Beus","Dietmar","Magren","Kraus","Magnor","Gresten","Breoc","Ryker","Otto","Arnulph","Sebastian","Sapersperia qui","Conrad","Leopus","Vornus","Micael","Millian","Niedrich","Alm","Frederus","Charlus","Sedric","Beren","Lothair","Guy","Henraus","Fedraus","Signar","Hamlen","Avar","Diedrech","Arnult","Raul"];
+ const Part2 = ["Zieger","Arbrecht","Kiergaard","Dranacht","Roellig","Narvecht","Carlmagne","Kraussar","Gervaht","Mordred","Stabian","Kroeller","Emrik","Goraldus","Bremon","Sigenand","Torismund","Vorleii","Tovarus","Benedemnus","Lichtner","Vedrenn","Siedrand","Yorghast","Velmnar","Bayard","Zieter","Grosmund","Havillan","Brichtus","Boremann","Richter","Ulbrecht","Zydwiege","Illinecht","Paragund"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function wordbearersgen(){
+ const Part1 = ["Atresh","Sadu","Borek","Nar","Argel","Tarem","Kor","Baruk","Noros","Baleros","Torek","Darad","Kurtha","Sor","Bathusa","Iarto","Koros","Ban","Sorot","Xaphen","Daroth","Vhol","Bara","Peros","Aspin","Verok","Qarad","Kemak","Arthul","Thulo","Jadath","Sumon","Dashul","Halam","Cenat","Kalim"];
+ const Part2 = ["Kartho","Layak","Gallek","Arthustra","Talgron","Ranasar","Peroth","Mairon","Grelloth","Merenkar","Sethilon","Vhanalis","Khedimar","Sa’quath","Xesugal","Caeroth","Demnos","Iagath","Drennulan","Kayadim","Saeperath","Gorlem","Vondar","Quroth","Okoleth","Vhandrax","Tchure","Derenoth","Khoura","Gharax","Iennos","Jadimas","Ennat","Bol","Ennar","Tal","Phaeron"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function ironwarriorsgen(){
+ const Part1 = ["Ferrox","Rannok","Attrax","Sulphus","Quixus","Sullus","Etrog","Tarrax","Drar","Tarnax","Herdax","Crol","Dreddusk","Varsigonn","Illux","Vonnax","Porso","Orn","Harram","Norros","Endion","Paradus","Sever","Dorgus","Lotros","Porox","Orim","Broug","Semnex","Ossus","Khyr","Ummek","Vhegor","Barxok","Hama","Detrus"];
+ const Part2 = ["the Unmaker","Destorax","Bharrox","Vhaxxan","Metagor","the Wallbreaker","Tarlensus","Estarox","Gorn","the Warpcutter","Kharaxiani","the Shatterer","of Praxas","Toramini","Veszrax","Korpanos","Zhorisch","Anarax","Kron-tu","Parrtox","Hrendor","Nassour","Taclimor","of Netremor","Ommorex","Falkos","Vorpasian","of the Foundry","Shon-tu","Hansao","Dronn","Gan-rus","Shon-tar","Steelspine","Rustclaw","Erdalexi"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+function nightlordsgen(){
+ const Part1 = ["Thavor","Talos","Daras","Navir","Jago","Zsaros","Kharros","Gudel","Naravesh","Yudesh","Ruvihr","Vastiani","Ioden","Ravkos","Sarran","Malithos","Koor","Cel","Lavir","Resk","Ullim","Sanad","Otho","Tovac","Mirac","Drachos","Saveth","Myros","Vandred","Keth","Garras","Qoros","Reskil","Amathus","Volis","Raddesk"];
+ const Part2 = ["Morgaris","Nosferrus","Khade","Varclav","Shadom","the Flayer","Reeve","Khravor","Souleater","the Feared","Carrow","Virrikor","Krouss","Sahaal","of the Ceaseless Torment","Narvirok","Zharost","Nightblade","Vakkaris","Taravakh","Envorros","Terask","Mercygiver","Reskian","Crutian","the Agoniser","Balicor","Naevian","Sarimund","of the Midnight Claw","Udreth","Kavatar","Sevataris","Rudesk","Vharaun","Baraski"];
+ gengen(pick(Part1) + " " + pick(Part2));
+}
+
+function pregenerator(){
+	const regiment = document.getElementById("regimentCB").checked;
+	let rowCount = document.getElementById("originTable").rows.length;
+	if (rowCount > 0) {deleteRow();}
+	if (regiment) {
+		let loopsies = document.getElementById("nrBox").value;
+		if (loopsies > 9000) {
+			document.getElementById("Hrasbildgoeshere").innerHTML = `<svg fill="currentcolor" width="50" height="50"><use href="#icon-9001"/></svg>`;
+            alert("It's over 9000! \nPlease select smaller regiment size.");
+        }
+        if (loopsies < 9001 && loopsies > 3000) {
+            alert("You won't be reading all of those, I recommend choosing 1000 or smaller regiment size to start with.");
+        }
+        if (loopsies < 3001) {
+            while (loopsies > 0) {
+                generator();
+                loopsies -= 1;
+            }
+        }
+	}
+	else{
+		generator();
+	}
+}
+
+//generator V
+function generator(){
+	const selectedValue = document.getElementById("options").value;
+	switch (selectedValue) {
+		case "Palanite Enforcers":
+			enforcersgen();
+			break;
+		case "Corpse Grinder Cults":
+			corpsegrindersgen();
+			break;
+		case "House Van Saar":
+			vansaarsgen();
+			break;
+		case "House Delaque":
+			delaquegen();
+			break;
+		case "Daemon":
+			daemonGen();
+			break;
+		case "Fellgor":
+			fellgorgen();
+			break;
+		case "House Orlock":
+			orlockgen();
+			break;
+		case "House Escher":
+			eschergen();
+			break;
+		case "House Cawdor":
+			cawdorgen();
+			break;
+		case "House Goliath":
+			goliathgen();
+			break;
+		case "Titan":
+			titangen();
+			break;
+		case "Chaos Titan":
+			renegadetitangen();
+			break;
+		case "Grey Knights":
+			greyknightsgen();
+			break;
+		case "Ultramarines":
+			ultramarinesgen();
+			break;
+		case "Imperial Fists":
+			imperialfistsgen();
+			break;
+		case "Crimson Fists":
+			crimsonfistsgen();
+			break;
+		case "Blood Angels":
+			bloodangelsgen();
+			break;
+		case "Raven Guard":
+			ravenguardgen();
+			break;
+		case "White Scars":
+			whitescarsgen();
+			break;
+		case "Iron Hands":
+			ironhandsgen();
+			break;
+		case "Space Wolves":
+			spacewolvesgen();
+			break;
+		case "Salamanders":
+			salamandersgen();
+			break;
+		case "Dark Angels":
+			darkangelsgen();
+			break;
+		case "Ork":
+			orkgen();
+			break;
+		case "Adeptus Custodes":
+			adeptuscustodesgen();
+			break;
+		case "Adeptus Sororitas":
+			adeptussororitasgen();
+			break;
+		case "Adeptus Mechanicus":
+			adeptusmechanicusgen();
+			break;
+		case "Astra Militarum":
+			astramilitarumgen();
+			break;
+		case "Black Legion":
+			blacklegiongen();
+			break;
+		case "Alpha Legion":
+			alphalegiongen();
+			break;
+		case "Emperors Children":
+			emperorschildrengen();
+			break;
+		case "World Eaters":
+			worldeatersgen();
+			break;
+		case "Death Guard":
+			deathguardgen();
+			break;
+		case "Thousand Sons":
+			thousandsonsgen();
+			break;
+		case "Asuryani":
+			asuryanigen();
+			break;
+		case "Drukhari":
+			drukharigen();
+			break;
+		case "Harlequins":
+			harlequingen();
+			break;
+		case "Necrons":
+			necrongen();
+			break;
+		case "Tau Empire":
+			taugen();
+			break;
+		case "Tyranids":
+			tyranidsgen();
+			break;
+		case "Genestealer Cults":
+			genstealergen();
+			break;
+		case "Kroot":
+			krootgen();
+			break;
+		case "Votann":
+			votanngen();
+			break;
+		case "Black Templars":
+			blacktemplarsgen();
+			break;
+		case "Word Bearers":
+			wordbearersgen();
+			break;
+		case "Iron Warriors":
+			ironwarriorsgen();
+			break;
+		case "Night Lords":
+			nightlordsgen();
+			break;
+		default:
+			alert("Please select a faction");
+			break;
+		}
+}
+//generator Î
+//selector V
+async function selected(){
+    await ensureSprite();
+    let bild;
+	if(document.getElementById("result")) {
+        document.getElementById("placeholder").removeChild(document.getElementById("result"));
+    }
+    const selectedValue = document.getElementById("options").value;
+    document.getElementById("options").options[0].disabled = true;
+    document.getElementById("regimentCB").disabled = false;
+    document.getElementById("headerLine").innerHTML = selectedValue + " Name Generator";
+    bild = {"id": selectedValue};
+	const gangFactions = new Set([
+    "Corpse Grinder Cults",
+    "House Van Saar",
+    "House Delaque",
+    "House Escher",
+    "House Orlock",
+    "House Cawdor",
+    "House Goliath"
+  ]);
+	  clearform();
+
+	if (gangFactions.has(selectedValue)) {
+	buildForm(FORM_CONFIGS.gang);
+	} else if (selectedValue === "Daemon") {
+  	buildDaemonForm("use");
+	} else if (FORM_CONFIGS[selectedValue]) {
+	buildForm(FORM_CONFIGS[selectedValue]);
+	}
+    document.getElementById("Hrasbildgoeshere").innerHTML = `<svg fill="currentcolor" width="50" height="50"><use href="#icon-${bild.id}"/></svg>`;
+    const raceSources = {
+    "Corpse Grinder Cults": "Necromunda - Gang War 1, Games Workshop Ltd., 2017, Necromunda - Gang War 2, Games Workshop Ltd., 2018, Necromunda - Gang War 3, Games Workshop Ltd., 2018, Necromunda - Gang War 4, Games Workshop Ltd., 2018, Necromunda - Gangs of the Underhive, Games Workshop Ltd., 2018, Necromunda - Rule Book, Games Workshop Ltd., 2018, Necromunda - Dark Uprising, Games Workshop Ltd., 2019, Necromunda - The Book of Judgement, Games Workshop Ltd., 2019, Necromunda - The Book of Peril, Games Workshop Ltd., 2019, Necromunda - The Book of Ruin, Games Workshop Ltd., 2019, Necromunda - House of Blades, Games Workshop Ltd., 2020, Necromunda - House of Chains, Games Workshop Ltd., 2020, Games Workshop Social media posts, Games Workshop Ltd., 2017-2020",
+	"House Cawdor": "Necromunda - Gang War 1, Games Workshop Ltd., 2017, Necromunda - Gang War 2, Games Workshop Ltd., 2018, Necromunda - Gang War 3, Games Workshop Ltd., 2018, Necromunda - Gang War 4, Games Workshop Ltd., 2018, Necromunda - Gangs of the Underhive, Games Workshop Ltd., 2018, Necromunda - Rule Book, Games Workshop Ltd., 2018, Necromunda - Dark Uprising, Games Workshop Ltd., 2019, Necromunda - The Book of Judgement, Games Workshop Ltd., 2019, Necromunda - The Book of Peril, Games Workshop Ltd., 2019, Necromunda - The Book of Ruin, Games Workshop Ltd., 2019, Necromunda - House of Blades, Games Workshop Ltd., 2020, Necromunda - House of Chains, Games Workshop Ltd., 2020, Games Workshop Social media posts, Games Workshop Ltd., 2017-2020",
+	"House Delaque": "Necromunda - Gang War 1, Games Workshop Ltd., 2017, Necromunda - Gang War 2, Games Workshop Ltd., 2018, Necromunda - Gang War 3, Games Workshop Ltd., 2018, Necromunda - Gang War 4, Games Workshop Ltd., 2018, Necromunda - Gangs of the Underhive, Games Workshop Ltd., 2018, Necromunda - Rule Book, Games Workshop Ltd., 2018, Necromunda - Dark Uprising, Games Workshop Ltd., 2019, Necromunda - The Book of Judgement, Games Workshop Ltd., 2019, Necromunda - The Book of Peril, Games Workshop Ltd., 2019, Necromunda - The Book of Ruin, Games Workshop Ltd., 2019, Necromunda - House of Blades, Games Workshop Ltd., 2020, Necromunda - House of Chains, Games Workshop Ltd., 2020, Games Workshop Social media posts, Games Workshop Ltd., 2017-2020",
+	"House Escher": "Necromunda - Gang War 1, Games Workshop Ltd., 2017, Necromunda - Gang War 2, Games Workshop Ltd., 2018, Necromunda - Gang War 3, Games Workshop Ltd., 2018, Necromunda - Gang War 4, Games Workshop Ltd., 2018, Necromunda - Gangs of the Underhive, Games Workshop Ltd., 2018, Necromunda - Rule Book, Games Workshop Ltd., 2018, Necromunda - Dark Uprising, Games Workshop Ltd., 2019, Necromunda - The Book of Judgement, Games Workshop Ltd., 2019, Necromunda - The Book of Peril, Games Workshop Ltd., 2019, Necromunda - The Book of Ruin, Games Workshop Ltd., 2019, Necromunda - House of Blades, Games Workshop Ltd., 2020, Necromunda - House of Chains, Games Workshop Ltd., 2020, Games Workshop Social media posts, Games Workshop Ltd., 2017-2020",
+	"House Goliath": "Necromunda - Gang War 1, Games Workshop Ltd., 2017, Necromunda - Gang War 2, Games Workshop Ltd., 2018, Necromunda - Gang War 3, Games Workshop Ltd., 2018, Necromunda - Gang War 4, Games Workshop Ltd., 2018, Necromunda - Gangs of the Underhive, Games Workshop Ltd., 2018, Necromunda - Rule Book, Games Workshop Ltd., 2018, Necromunda - Dark Uprising, Games Workshop Ltd., 2019, Necromunda - The Book of Judgement, Games Workshop Ltd., 2019, Necromunda - The Book of Peril, Games Workshop Ltd., 2019, Necromunda - The Book of Ruin, Games Workshop Ltd., 2019, Necromunda - House of Blades, Games Workshop Ltd., 2020, Necromunda - House of Chains, Games Workshop Ltd., 2020, Games Workshop Social media posts, Games Workshop Ltd., 2017-2020",
+	"House Orlock": "Necromunda - Gang War 1, Games Workshop Ltd., 2017, Necromunda - Gang War 2, Games Workshop Ltd., 2018, Necromunda - Gang War 3, Games Workshop Ltd., 2018, Necromunda - Gang War 4, Games Workshop Ltd., 2018, Necromunda - Gangs of the Underhive, Games Workshop Ltd., 2018, Necromunda - Rule Book, Games Workshop Ltd., 2018, Necromunda - Dark Uprising, Games Workshop Ltd., 2019, Necromunda - The Book of Judgement, Games Workshop Ltd., 2019, Necromunda - The Book of Peril, Games Workshop Ltd., 2019, Necromunda - The Book of Ruin, Games Workshop Ltd., 2019, Necromunda - House of Blades, Games Workshop Ltd., 2020, Necromunda - House of Chains, Games Workshop Ltd., 2020, Games Workshop Social media posts, Games Workshop Ltd., 2017-2020",
+	"House Van Saar": "Necromunda - Gang War 1, Games Workshop Ltd., 2017, Necromunda - Gang War 2, Games Workshop Ltd., 2018, Necromunda - Gang War 3, Games Workshop Ltd., 2018, Necromunda - Gang War 4, Games Workshop Ltd., 2018, Necromunda - Gangs of the Underhive, Games Workshop Ltd., 2018, Necromunda - Rule Book, Games Workshop Ltd., 2018, Necromunda - Dark Uprising, Games Workshop Ltd., 2019, Necromunda - The Book of Judgement, Games Workshop Ltd., 2019, Necromunda - The Book of Peril, Games Workshop Ltd., 2019, Necromunda - The Book of Ruin, Games Workshop Ltd., 2019, Necromunda - House of Blades, Games Workshop Ltd., 2020, Necromunda - House of Chains, Games Workshop Ltd., 2020, Games Workshop Social media posts, Games Workshop Ltd., 2017-2020",
+	"Palanite Enforcers": "Necromunda - Gang War 1, Games Workshop Ltd., 2017, Necromunda - Gang War 2, Games Workshop Ltd., 2018, Necromunda - Gang War 3, Games Workshop Ltd., 2018, Necromunda - Gang War 4, Games Workshop Ltd., 2018, Necromunda - Gangs of the Underhive, Games Workshop Ltd., 2018, Necromunda - Rule Book, Games Workshop Ltd., 2018, Necromunda - Dark Uprising, Games Workshop Ltd., 2019, Necromunda - The Book of Judgement, Games Workshop Ltd., 2019, Necromunda - The Book of Peril, Games Workshop Ltd., 2019, Necromunda - The Book of Ruin, Games Workshop Ltd., 2019, Necromunda - House of Blades, Games Workshop Ltd., 2020, Necromunda - House of Chains, Games Workshop Ltd., 2020, Games Workshop Social media posts, Games Workshop Ltd., 2017-2020",
+	"Black Templars": "Warhammer 40,000, Psychic Awakening: Faith and Fury, Games Workshop Ltd., 2019",
+	"Blood Angels": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"Crimson Fists": "",
+	"Dark Angels": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"Grey Knights": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, https://www.warhammer-community.com/commandroster/",
+	"Imperial Fists": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"Iron Hands": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"Raven Guard": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"Salamanders": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"Space Wolves": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"Ultramarines": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"White Scars": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021, https://www.warhammer-community.com/commandroster/",
+	"Adeptus Custodes": "https://www.warhammer-community.com/commandroster/",
+	"Adeptus Mechanicus": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, https://www.warhammer-community.com/commandroster/",
+	"Adeptus Sororitas": "https://www.warhammer-community.com/commandroster/",
+	"Astra Militarum": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, https://www.warhammer-community.com/commandroster/",
+	"Alpha Legion": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Psychic Awakening: Faith and Fury, Games Workshop Ltd., 2019, https://www.warhammer-community.com/commandroster/",
+	"Black Legion": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, https://www.warhammer-community.com/commandroster/",
+	"Death Guard": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Emperors Children": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Psychic Awakening: Faith and Fury, Games Workshop Ltd., 2019, https://www.warhammer-community.com/commandroster/",
+	"Iron Warriors": "Warhammer 40,000, Psychic Awakening: Faith and Fury, Games Workshop Ltd., 2019, https://www.warhammer-community.com/commandroster/",
+	"Night Lords": "Warhammer 40,000, Psychic Awakening: Faith and Fury, Games Workshop Ltd., 2019, https://www.warhammer-community.com/commandroster/",
+	"Thousand Sons": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Word Bearers": "Warhammer 40,000, Psychic Awakening: Faith and Fury, Games Workshop Ltd., 2019, https://www.warhammer-community.com/commandroster/",
+	"World Eaters": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Psychic Awakening: Faith and Fury, Games Workshop Ltd., 2019, https://www.warhammer-community.com/commandroster/",
+	"Titan": "Warhammer community, Games Workshop Ltd., 2020",
+	"Chaos Titan": "Warhammer community, Games Workshop Ltd., 2020",
+	"Daemon": "Realm of Chaos: Slaves to Darkness, Games Workshop Ltd., 1988",
+	"Fellgor": "Several Fellgor names derive from the Dark Tongue, a mystical language used in the worship and summoning of the Chaos Gods. Both the Beastmen and the Skaven communicate using a corrupted dialect of this ancient tongue.<br><b>Arcane Journal: Beastmen Brayherds, Games Workshop Ltd., 2025<br>Battletome: Beasts of Chaos, Games Workshop Ltd., 2018<br>Blood Bowl II [Computer game], Cyanide Studios, 2015<br>Mordheim: Warband Skirmish [app], Legendary Games, 2017<br>Old World Bestiary (Warhammer Fantasy Roleplay), Black Industries, 2005<br>Spike! The Fantasy Football Journal. Issue; 01, Games Workshop Ltd., 2018<br>The Realmgate Wars: Quest for Ghal Maraz, Games Workshop Ltd., 2015<br>The Third Citadel compendium, Citadel Miniatures, 1985<br>Total War: Warhammer [Computer game], Creative Assembly, Sega., 2016<br>Warcry: Tome of Champions, Games Workshop Ltd., 2019<br>Warhammer Armies: Beastmen (7th Edition), Games Workshop Ltd., 2010<br>Warhammer Armies: Beasts of Chaos (6th Edition), Games Workshop Ltd., 2003<br>Warhammer Underworlds: Beastgrave, Games Workshop Ltd., 2019<br>White Dwarf, Issues: 108, Games Workshop Ltd., 1988<br>White Dwarf: 48, Games Workshop Ltd., 2014",
+	"Asuryani": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Drukhari": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Harlequins": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Necrons": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018, Warhammer 40,000, Kill Team Pariah Nexus, Games Workshop Ltd., 2021",
+	"Ork": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Tau Empire": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Kroot": "https://www.warhammer-community.com/commandroster/",
+	"Tyranids": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Genestealer Cults": "Warhammer 40,000, Kill Team, Games Workshop Ltd., 2018",
+	"Votann": "Warhammer 40,000, Codex: Leagues of Votann, Games Workshop Ltd., 2022"
+};
+    const sources = raceSources[selectedValue] || "Apologies, work in progress. I will get to this asap";
+    document.getElementById("sourcesContent").innerHTML = sources;
+}
+//forms
+const FORM_CONFIGS = {
+  gang: {
+    checkboxes: [
+      { id: "title", label: "Gang", checked: false }
+    ]
+  },
+
+  "Palanite Enforcers": {
+    checkboxes: [
+      { id: "title", label: "Patrol", checked: false }
+    ]
+  },
+  Necrons: {
+    checkboxes: [
+      { id: "title", label: "Appellation", checked: true }
+    ]
+  },
+  "Astra Militarum": {
+    radios: [
+      { id: "allorc", label: "Cadian" },
+      { id: "blorc", label: "Catachan" },
+      { id: "savorc", label: "Valhallan" },
+      { id: "sham", label: "Tallarn" }
+    ]
+  },
+  Daemon: {
+    radios: [
+      {
+        id: "use",
+        label: "Use-names",
+		checked: true,
+        onChange: "daemonchoser()"
+      },
+      {
+        id: "trueN",
+        label: "True names",
+		checked: false,
+        onChange: "daemonchoser()"
+      }
+    ]
+  },
+  Fellgor: { checkboxes: [{ preset: "titleCheckbox" }] },
+  Drukhari: {
+    radios: [
+      { id: "Male", label: "Kabalite" },
+      { id: "Female", label: "Wych-cult" }
+    ],
+    radioName: "radioImperial"
+  },
+
+  Asuryani: {
+    genderRadios: true
+  },
+
+  Votann: {
+    genderRadios: true
+  }
+};
+function createRadio(id, name, labelText, labelId, checked = false, onChange = null) {
+    const label = document.createElement("label");
+    label.setAttribute("class", "radio-inline");
+    label.setAttribute("id", labelId);
+    label.innerHTML = labelText;
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.setAttribute("id", id);
+    input.setAttribute("name", name);
+    input.setAttribute("value", id);
+    if (checked) input.setAttribute("checked", "true");
+    if (onChange) input.setAttribute("onchange", onChange);
+    const box = document.createElement("label");
+    box.setAttribute("id", "rbx");
+    box.setAttribute("for", id);
+    label.appendChild(input);
+    label.appendChild(box);
+    return label;
+}
+function createCheckbox(id, labelText, labelId, checked = false, onChange = null, disabled = false) {
+    const label = document.createElement("label");
+    label.setAttribute("id", labelId);
+    label.innerHTML = labelText;
+    const input = document.createElement("input");
+    input.setAttribute("type", "checkbox");
+    input.setAttribute("id", id);
+    if (checked) input.setAttribute("checked", "true");
+    if (onChange) input.setAttribute("onchange", onChange);
+    if (disabled) input.setAttribute("disabled", "true");
+    const box = document.createElement("label");
+    box.setAttribute("id", "bx");
+    box.setAttribute("for", id);
+    label.appendChild(input);
+    label.appendChild(box);
+    return label;
+}
+function buildForm(config) {
+    if (config.radios) {
+        const radiodiv = document.createElement("p");
+        radiodiv.setAttribute("id", "radioline");
+        if (config.radioPrefix) radiodiv.innerHTML = config.radioPrefix;
+        document.getElementById("radioline1").appendChild(radiodiv);
+
+        const colourGroup = document.createElement("div");
+        colourGroup.setAttribute("id", "colourGroup");
+        radiodiv.appendChild(colourGroup);
+
+        const groupName = config.radioName ?? "radioGroup";
+        const groupOnChange = config.radioOnChange ?? null;
+
+        config.radios.forEach((r, i) => {
+            const onChange = r.onChange ?? groupOnChange;
+            const checked = r.checked ?? i === 0;
+			colourGroup.appendChild(
+                createRadio(r.id, groupName, r.label, r.id + "l", checked, onChange)
+            );
+        });
+    }
+    if (config.genderRadios) {
+        const genderdiv = document.createElement("p");
+        genderdiv.setAttribute("id", "genderline");
+        if(document.getElementById("radioline")){document.getElementById("radioline").appendChild(genderdiv);}
+        else{document.getElementById("radioline1").appendChild(genderdiv);}
+        const genderGroup = document.createElement("div");
+        genderGroup.setAttribute("id", "genderGroup");
+        genderdiv.appendChild(genderGroup);
+        [
+            { id: "Male",   label: "Male"   },
+            { id: "Female", label: "Female" },
+        ].forEach((r, i) => {
+            genderGroup.appendChild(
+                createRadio(r.id, "radioImperial", r.label, r.id + "l", i === 0, null)
+            );
+        });
+    }
+    const isRegiment = document.getElementById("regimentCB").checked;
+    const presets = {
+        titleCheckbox: {id: "title", label: "Title", checked: true},
+        surnameCheckbox: {id: "surN", label: "Surname", checked: true},
+    };
+    const allCheckboxes = (config.checkboxes ?? []).flatMap(cb => {
+        if (cb.preset && presets[cb.preset]) {
+            return [presets[cb.preset]];
+        }
+        return [cb];
+    });
+    if (allCheckboxes.length > 0) {
+        const checkdiv = document.createElement("div");
+        checkdiv.setAttribute("id", "checkboxline");
+        document.getElementById("checkboxline1").appendChild(checkdiv);
+
+        allCheckboxes.forEach(cb => {
+            const disabled = cb.disabled || (cb.disabledIfRegiment && isRegiment);
+            const checked  = cb.checked && !(cb.disabledIfRegiment && isRegiment);
+            document.getElementById("checkboxline").appendChild(
+                createCheckbox(cb.id, cb.label, cb.id + "l", checked, cb.onChange, disabled)
+            );
+        });
+    }
+}
+function buildDaemonForm(selectedType = "use") {
+  buildForm({
+    radios: [
+      { id: "use", label: "Use-names", checked: selectedType === "use" },
+      { id: "trueN", label: "True names", checked: selectedType === "trueN" }
+    ],
+    radioName: "radioDN",
+    radioOnChange: "daemonchoser()"
+  });
+
+  const radioline = document.getElementById("radioline");
+
+  radioline.appendChild(createRadio(
+    "greater", "radioChaos", "Greater", "greaterl", true
+  ));
+  radioline.appendChild(createRadio(
+    "other", "radioChaos", "Other", "otherl", false
+  ));
+
+  if (selectedType === "trueN") {
+        const god = document.createElement("select");
+        const Slaanesh = document.createElement("option");
+        const Khorne = document.createElement("option");
+        const Tzeentch = document.createElement("option");
+        const Nurgle = document.createElement("option");
+        god.setAttribute("id", "god");
+        Slaanesh.setAttribute("value", "6");
+        Khorne.setAttribute("value", "8");
+        Tzeentch.setAttribute("value", "9");
+        Nurgle.setAttribute("value", "7");
+        Slaanesh.text = "Slaanesh";
+        Khorne.text = "Khorne";
+        Tzeentch.text = "Tzeentch";
+        Nurgle.text = "Nurgle";
+        god.add(Slaanesh);
+        god.add(Khorne);
+        god.add(Tzeentch);
+        god.add(Nurgle);
+        document.getElementById("radioline").appendChild(god);
+        var d6 = document.createElement("select");
+        var one = document.createElement("option");
+        var two = document.createElement("option");
+        d6.setAttribute("id", "d6");
+        one.setAttribute("value", "6");
+        two.setAttribute("value", "12");
+        one.text = "1 D6";
+        two.text = "2 D6";
+        d6.add(one);
+        d6.add(two);
+        document.getElementById("radioline").appendChild(d6);
+    }    
+}
+function daemonchoser() {
+  if (document.getElementById("use").checked) {
+    clearform();
+	buildDaemonForm("use");
+  } else if (document.getElementById("trueN").checked) {
+    clearform();
+	buildDaemonForm("trueN");
+  }
+}
+function clearform() {
+    ["radioline", "genderline", "checkboxline"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.parentNode.removeChild(el);
+    });
+    const table = document.getElementById("originTable");
+    while (table.rows.length > 0) {
+        table.deleteRow(0);
+    }
+}
+function addRow(oName,bg,sOrc){
+			
+	var table = document.getElementById("originTable");
+	var row = table.insertRow(0);
+	var cell0 = row.insertCell(0);
+	var cell1 = row.insertCell(1);
+	var cell2 = row.insertCell(2);
+	cell0.innerHTML= oName;
+	cell1.innerHTML= bg;
+	cell2.innerHTML= sOrc;
+}
+function deleteRow(){
+	var rowCount = document.getElementById("originTable").rows.length -1;
+	var table = document.getElementById("originTable");
+	while(-1 < rowCount){ table.deleteRow(rowCount);
+ 		rowCount-= 1;}
+}
+function regimentform(){
+	var value = document.getElementById("regimentCB").checked;
+	if(value === true) { var box = document.createElement("input");
+	 var boxL = document.createElement("label");
+	 var boxdiv = document.createElement("div");
+	 boxdiv.setAttribute("id", "regimentline");
+	 document.getElementById("boxline").appendChild(boxdiv);
+	 boxL.setAttribute("id", "boxL");
+	 boxL.innerHTML="Number of Names";
+	 document.getElementById("regimentline").appendChild(boxL);
+	 box.setAttribute("type", "number");
+	 box.setAttribute("min", "2");
+	 box.setAttribute("max", "3000");
+	 box.setAttribute("id", "nrBox");
+	 document.getElementById("boxL").appendChild(box);
+	}
+	if(value === false) { document.getElementById("boxline").removeChild(document.getElementById("regimentline"));}
+}
+</script>
+<div class="noborderdv">
+<select class="form-control" id="options" onchange="selected()">
+	<option id="starter">Select One</option>
+	<option disabled>Necromunda</option>
+	<option value="Corpse Grinder Cults">　Corpse Grinder Cults</option>
+	<option value="House Cawdor">　House Cawdor</option>
+	<option value="House Delaque">　House Delaque</option>
+	<option value="House Escher">　House Escher</option>
+	<option value="House Goliath">　House Goliath</option>
+	<option value="House Orlock">　House Orlock</option>
+	<option value="House Van Saar">　House Van Saar</option>
+	<option value="Palanite Enforcers">　Palanite Enforcers</option>
+	<option disabled>Adeptus Astartes</option>
+	<option value="Black Templars">　Black Templars</option>
+	<option value="Blood Angels">　Blood Angels</option>
+	<option value="Crimson Fists">　Crimson Fists</option>
+	<option value="Dark Angels">　Dark Angels</option>
+	<option value="Grey Knights">　Grey Knights</option>
+	<option value="Imperial Fists">　Imperial Fists</option>
+	<option value="Iron Hands">　Iron Hands</option>
+	<option value="Raven Guard">　Raven Guard</option>
+	<option value="Salamanders">　Salamanders</option>
+	<option value="Space Wolves">　Space Wolves</option>
+	<option value="Ultramarines">　Ultramarines</option>
+	<option value="White Scars">　White Scars</option>
+	<option value="Adeptus Custodes">Adeptus Custodes</option>
+	<option value="Adeptus Mechanicus">Adeptus Mechanicus</option>
+	<option value="Adeptus Sororitas">Adeptus Sororitas</option>
+	<option value="Astra Militarum">Astra Militarum</option>
+	<option disabled>Heretic Astartes</option>
+	<option value="Alpha Legion">　Alpha Legion</option>
+	<option value="Black Legion">　Black Legion</option>
+	<option value="Death Guard">　Death Guard</option>
+	<option value="Emperors Children">　Emperor's Children</option>
+	<option value="Iron Warriors">　Iron Warriors</option>
+	<option value="Night Lords">　Night Lords</option>
+	<option value="Thousand Sons">　Thousand Sons</option>
+	<option value="Word Bearers">　Word Bearers</option>
+	<option value="World Eaters">　World Eaters</option>
+	<option value="Titan">Titan</option>
+	<option value="Chaos Titan">Chaos Titan</option>
+	<option value="Daemon">Chaos Daemons</option>
+	<option value="Fellgor">Fellgor</option>
+	<option value="Asuryani">Asuryani</option>
+	<option value="Drukhari">Drukhari</option>
+	<option value="Harlequins">Harlequins</option>
+	<option value="Necrons">Necrons</option>
+	<option value="Ork">Ork</option>
+	<option value="Tau Empire">T'au Empire</option>
+	<option value="Kroot">Kroot</option>
+	<option value="Tyranids">Tyranids</option>
+	<option value="Genestealer Cults">Genestealer Cults</option>
+	<option value="Votann">Votann</option>
+</select>
+<b><p size=10 id="headerLine" style="text-align:center">40k Name Generator</b></p>
+<div align="center" id="Hrasbildgoeshere"></div>
+<br>
+<div id="radioline1" style="text-align:center"><div id="radioline">
+<span style="font-weight: bold; font-size: 15px;"><b>Welcome to the Name Generator 40000! Covering a wide selection of races and faction such as: Majority of Spacemarine chapters including Sisters of Battle, The Traitor Chapters, Titans, Skitarii. All Necromunda Houses including Gang name generators for each. Daemons, Orks, Eldar, Necron, Tau, Kroot, Tyranids, Geanstealer Cults, Votann and more, all from Lore Friendly Sources. Also great for many different games such as: Necromunda, Warhammer 40k, Kill Team, Blackstone Fortress, Space Hulk, Gorkamorka, Adeptus Titanicus, Inquisitor, Speed Freeks and Warhammer 40,000 Roleplay<br>
+<br>
+
+<br>
+Select your desired race up in the left corner. There are still some work to be done. I welcome all feedback.</b></span></div></div>
+<div id="checkboxline1"></div>
+<div style="text-align: right; margin: 0 auto 0;" id="rCb">
+<label ><input type="checkbox" id="regimentCB" onchange="regimentform()" disabled /><label for="regimentCB" id="bxr"></label>Regiment mode</label>
+<div id="boxline"></div>
+</div>
+<div id="wrapper" align="center">
+<div id="generator" class="generator">
+<div id="placeholder"></div>
+<table id="originTable"><col width="25%"><col width="50%"><col width="25%"></table>
+<input type="button" id=generatorbtn value="Generate" onclick="pregenerator()" />
+</div>
+<details id="sourcesPanel" class="generator">
+    <summary align="left">Sources</summary>
+    <div id="sourcesContent">
+        Visit <a href="https://blessedbynuffle.blogspot.com/p/sources.html" target="_blank">my source books page</a> to see all sources or select a faction to see specific sources for each faction.
+    </div>
+</details>
